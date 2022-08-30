@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+![thumbnail](https://user-images.githubusercontent.com/16558205/180779213-ea740975-3df1-460a-a964-0a623ee25872.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Live - https://react-portfolio-template.netlify.app/
 
-## Available Scripts
+### Demo Video - https://www.youtube.com/watch?v=62_HLbx2zLQ&t=9s
 
-In the project directory, you can run:
+### Tutorials
 
-### `npm start`
+Youtube - https://www.youtube.com/watch?v=8cmJ2kR4SpM
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Blog - https://blog.chetanverma.com/how-to-build-a-portfolio-website-using-nextjs-and-tailwindcss
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Features - 
 
-### `npm test`
+- Modern Stack (Next.js + TailwindCSS)
+- Minimal Design
+- Easy To Browse
+- Easy To Customize your details With GUI
+- Blog Crud (Create, Read, Update, Delete blog with easy to use UI).
+- Dark Mode
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Sections
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Header
+- Work
+- Services
+- About
+- Contact
+- Markdown Blog
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### How To Use
 
-### `npm run eject`
+- Clone this repo
+- run `yarn`
+- `yarn dev`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### How To Deploy - 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- There are many ways to Deploy this repo.
+- here we are gonna use netlify
+- Login into netlify with github
+- after login select the forked repo or the repo you want to deploy
+- after selecting netlify will automatially deploy your website.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Quickes way to deploy this repo - 
 
-## Learn More
+[![Deploy To Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/chetanverma16/react-portfolio-template)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### How To Contribute - 
 
-### Code Splitting
+I would be very happy to review your PRs and all the awesome things that you can improve on this portfolio.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Tech Stack Used - 
+- Next.js
+- TailwindCSS
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+### Thanks
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+If you liked this portfolio template, don't forget to give it a ⭐.
 
-### Advanced Configuration
+## Awesome Contributors
+[@Aryan3212](https://github.com/Aryan3212) [@achu-krishna](https://github.com/achu-krishna)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Supporting
+Many hours of hard work have gone into this project. Your support will be very appreciated!
 
-### Deployment
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/chetanverma)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
