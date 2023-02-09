@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Typist from 'react-typist-component';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Jumbotron } from "./migration";
 
 const MainBody = React.forwardRef(
@@ -35,6 +36,8 @@ const MainBody = React.forwardRef(
                 aria-label={`My ${icon.image.split("-")[1]}`}
               >
                 <i className={`fab ${icon.image}  fa-3x socialicons`} />
+                {/* <FontAwesomeIcon icon="fa-brands fa-hashnode" /> */}
+                {/* <FontAwesomeIcon icon={`fa-brands ${icon.image}`} /> */}
               </a>
             ))}
           </div>
