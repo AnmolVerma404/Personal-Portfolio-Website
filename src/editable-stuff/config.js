@@ -57,8 +57,8 @@ const repos = {
   show: true,
   heading: "Recent Projects",
   gitHubUsername: "AnmolVerma404", //i.e."johnDoe12Gh"
-  reposLength: 4,
-  specificRepos: [],
+  reposLength: 0,
+  specificRepos: ["CrowdQuest","MapMyPath","Searching-Sorting-Visualizer","Data-Structures-and-Algorithms"],
 };
 
 // Leadership SECTION
