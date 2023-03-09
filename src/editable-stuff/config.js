@@ -55,10 +55,10 @@ const about = {
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
-  heading: "Recent Projects",
+  heading: "Pinned Repository",
   gitHubUsername: "AnmolVerma404", //i.e."johnDoe12Gh"
   reposLength: 0,
-  specificRepos: ["CrowdQuest","MapMyPath","Searching-Sorting-Visualizer","Data-Structures-and-Algorithms"],
+  specificRepos: ["CrowdQuest","Healthy-HearTechs","MapMyPath","Data-Structures-and-Algorithms"],
 };
 
 // Leadership SECTION
