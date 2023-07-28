@@ -17,11 +17,11 @@ const mainBody = {
     },
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/anmol-verma-205182205/",
+      url: "https://www.linkedin.com/in/anmolverma404/",
     },
     {
       image: "fa-twitter",
-      url: "https://twitter.com/AnmolVe97231707",
+      url: "https://twitter.com/anmolverma404",
     },
   ],
 };
@@ -101,7 +101,7 @@ const skills = {
   ],
   softSkills: [
     { name: "Goal-Oriented", value: 80 },
-    { name: "Consistency", value: 95 },
+    { name: "Consistency", value: 100 },
     { name: "Collaboration", value: 90 },
     { name: "Positivity", value: 90 },
     { name: "Adaptability", value: 80 },
