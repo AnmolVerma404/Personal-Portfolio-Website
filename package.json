@@ -32,7 +32,11 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"custom-deploy": "node pages.js"
+		"custom-deploy": "node pages.js",
+		"git-add": "git add .",
+		"git-commit": "git commit -am \"feat: :tada: updated and deployed\"",
+		"git-push": "git push origin master",
+		"deploy-all": "npm run git-add && npm run git-commit && npm run git-push && npm run predeploy && npm run deploy"
 	},
 	"engines": {
 		"npm": "^8.11.0",
