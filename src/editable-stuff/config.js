@@ -44,7 +44,7 @@ const about = {
   imageLink: require("../editable-stuff/anmolverma.png"),
   imageSize: 375,
   message:
-    "My name is Anmol Verma. I’m a graduate of 2020-2024 from Vellore Institute of Technology Bhopal with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on projects.",
+    "My name is Anmol Verma. I’m a graduate of 2020-2024 from Vellore Institute of Technology Bhopal with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on projects. Currently I am working as a Web Engineer Trainee at rtCamp",
   resume: "https://drive.google.com/file/d/1HcHY8d4PNzcmr0E2IwjAhSQqJxHSsyk-/view",
 };
 
@@ -58,7 +58,7 @@ const repos = {
   heading: "Pinned Repository",
   gitHubUsername: "AnmolVerma404", //i.e."johnDoe12Gh"
   reposLength: 0,
-  specificRepos: ["CrowdQuest","Healthy-HearTechs","MapMyPath","Data-Structures-and-Algorithms"],
+  specificRepos: ["TicketOps","Healthy-HearTechs","MapMyPath","Data-Structures-and-Algorithms"],
 };
 
 // Leadership SECTION
