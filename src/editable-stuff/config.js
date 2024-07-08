@@ -9,7 +9,7 @@ const mainBody = {
   firstName: "Anmol",
   middleName: "",
   lastName: "Verma",
-  message: " Passionate about changing the world with technology. ",
+  message: " I Code :) Quotes not found 404 ;) ",
   icons: [
     {
       image: "fa-github",
@@ -44,7 +44,7 @@ const about = {
   imageLink: require("../editable-stuff/anmolverma.png"),
   imageSize: 375,
   message:
-    "My name is Anmol Verma. I’m a graduate of 2020-2024 from Vellore Institute of Technology Bhopal with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on projects. Currently I am working as a Web Engineer Trainee at rtCamp",
+    "Hey there! I'm Anmol Verma, a graduate from Vellore Institute of Technology Bhopal, where I spent 2020-2024 learning the art of turning coffee into code. I majored in Computer Engineering, which is a fancy way of saying I spend a lot of time convincing computers to do what I want (and occasionally begging them to cooperate). Currently, I'm rocking the software engineering scene at rtCamp. When I'm not buried under lines of code, you can find me tinkering with projects, dreaming up the next big thing, or plotting ways to convince my computer to clean up its own bugs.",
   resume: "https://drive.google.com/file/d/1HcHY8d4PNzcmr0E2IwjAhSQqJxHSsyk-/view",
 };
 
