@@ -40,7 +40,7 @@ const mainBody = {
 const about = {
 	show: true,
 	heading: 'About Me',
-	imageLink: require('../editable-stuff/anmolverma.jpeg'),
+	imageLink: require('./anmolverma.jpeg'),
 	imageSize: 375,
 	message:
 		"Hey there! I'm Anmol Verma, a graduate from Vellore Institute of Technology Bhopal, where I spent 2020-2024 learning the art of turning coffee into code. I majored in Computer Engineering, which is a fancy way of saying I spend a lot of time convincing computers to do what I want (and occasionally begging them to cooperate). Currently, I'm rocking the software engineering scene at rtCamp. When I'm not buried under lines of code, you can find me tinkering with projects, dreaming up the next big thing, or plotting ways to convince my computer to clean up its own bugs.",
