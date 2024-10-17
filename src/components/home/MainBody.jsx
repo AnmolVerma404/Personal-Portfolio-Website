@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Typist from 'react-typist-component';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Jumbotron } from './migration';
 
 const MainBody = React.forwardRef(
