@@ -33,7 +33,7 @@ const mainBody = {
 //b) a link to an hosted image
 //      i.e:profilePictureLink:"www.picturesonline.com/johnDoeFancyAvatar.jpg",
 //c) image in "editable-stuff" directory and use require("") to import here,
-//      i.e: profilePictureLink: require("../editable-stuff/anmolverma.png"),
+//      i.e: profilePictureLink: require("../editable-stuff/anmolverma.jpeg"),
 //d) If you do not want any picture to be displayed, just leave it empty :)
 //      i.e: profilePictureLink: "",
 
@@ -41,7 +41,7 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/anmolverma.png"),
+  imageLink: require("../editable-stuff/anmolverma.jpeg"),
   imageSize: 375,
   message:
     "Hey there! I'm Anmol Verma, a graduate from Vellore Institute of Technology Bhopal, where I spent 2020-2024 learning the art of turning coffee into code. I majored in Computer Engineering, which is a fancy way of saying I spend a lot of time convincing computers to do what I want (and occasionally begging them to cooperate). Currently, I'm rocking the software engineering scene at rtCamp. When I'm not buried under lines of code, you can find me tinkering with projects, dreaming up the next big thing, or plotting ways to convince my computer to clean up its own bugs.",
@@ -69,12 +69,12 @@ const leadership = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
   images: [
     { 
-      img: require("../editable-stuff/anmolverma.png"), 
+      img: require("../editable-stuff/anmolverma.jpeg"), 
       label: "First slide label", 
       paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
     },
     { 
-      img: require("../editable-stuff/anmolverma.png"), 
+      img: require("../editable-stuff/anmolverma.jpeg"), 
       label: "Second slide label", 
       paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
     },
@@ -121,18 +121,13 @@ const getInTouch = {
 };
 
 const experiences = {
-  show: false,
+  show: true,
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
-    },
-    {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      role: 'Software Engineer',
+      companylogo: require('../assets/img/rtCamp.png'),
+      date: 'Oct 2023 – Present',
     },
   ]
 }
