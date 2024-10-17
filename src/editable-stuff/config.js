@@ -56,7 +56,7 @@ const about = {
 const repos = {
   show: true,
   heading: "Pinned Repository",
-  gitHubUsername: "AnmolVerma404", //i.e."johnDoe12Gh"
+  gitHubUsername: "AnmolVerma404",
   reposLength: 0,
   specificRepos: ["TicketOps","Healthy-HearTechs","MapMyPath","Data-Structures-and-Algorithms"],
 };
@@ -89,6 +89,7 @@ const leadership = {
 const skills = {
   show: true,
   heading: "Skills",
+  showHardSkills:true,
   hardSkills: [
     { name: "C++", value: 90 },
     { name: "Data Structures", value: 85 },
@@ -96,18 +97,8 @@ const skills = {
     { name: "TypeScript", value: 70 },
     { name: "React", value: 65 },
     { name: "HTML/CSS", value: 80 },
-    { name: "Solidity", value: 60 },
+    { name: "PHP", value: 80 },
     { name: "DevOps", value: 50 },
-  ],
-  softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Consistency", value: 100 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 90 },
-    { name: "Adaptability", value: 80 },
-    { name: "Problem Solving", value: 85 },
-    { name: "Empathy", value: 90 },
-    { name: "Creativity", value: 90 },
   ],
 };
 
@@ -116,7 +107,7 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Software Engineering! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+    "Thank you for visiting 🙌 If you have any questions or inquiries, feel free to reach out via email 📩",
   email: "anmolverma102002@gmail.com",
 };
 
