@@ -8,10 +8,7 @@ import { Container } from 'react-bootstrap';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
 
 const Skills = React.forwardRef(
-	(
-		{ heading, hardSkills, showHardSkills },
-		ref
-	) => {
+	({ heading, hardSkills, showHardSkills }, ref) => {
 		const skillsTabRef = React.useRef(null);
 		const [isScrolled, setIsScrolled] = React.useState(false);
 
