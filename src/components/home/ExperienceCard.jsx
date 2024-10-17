@@ -8,8 +8,6 @@ const ExperienceCard = ({ data }) => {
 			className="bg-white mb-3 experience__row__img"
 			src={data.companylogo}
 			alt=""
-			width="500px"
-			height="auto"
 		/>
 	);
 	return (
