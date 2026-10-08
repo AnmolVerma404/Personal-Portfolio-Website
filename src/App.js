@@ -80,7 +80,7 @@ const App = () => {
 					<GetInTouch
 						heading={getInTouch.heading}
 						message={getInTouch.message}
-						email={getInTouch.email}
+						link={getInTouch.link}
 					/>
 				)}
 			</Footer>

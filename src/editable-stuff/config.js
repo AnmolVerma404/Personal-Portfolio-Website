@@ -44,8 +44,6 @@ const about = {
 	imageSize: 375,
 	message:
 		"Hey there! I'm Anmol Verma, a graduate from Vellore Institute of Technology Bhopal, where I spent 2020-2024 learning the art of turning coffee into code. I majored in Computer Engineering, which is a fancy way of saying I spend a lot of time convincing computers to do what I want (and occasionally begging them to cooperate). Currently, I'm rocking the software engineering scene at rtCamp. When I'm not buried under lines of code, you can find me tinkering with projects, dreaming up the next big thing, or plotting ways to convince my computer to clean up its own bugs.",
-	resume:
-		'https://drive.google.com/file/d/1HcHY8d4PNzcmr0E2IwjAhSQqJxHSsyk-/view',
 };
 
 // PROJECTS SECTION
@@ -98,7 +96,7 @@ const skills = {
 	hardSkills: [
 		{ name: 'C++', value: 90 },
 		{ name: 'Data Structures', value: 85 },
-		{ name: 'JavaScript', value: 90 },
+		{ name: 'Python', value: 70 },
 		{ name: 'TypeScript', value: 70 },
 		{ name: 'React', value: 65 },
 		{ name: 'HTML/CSS', value: 80 },
@@ -112,8 +110,11 @@ const getInTouch = {
 	show: true,
 	heading: 'Get In Touch',
 	message:
-		'Thank you for visiting 🙌 If you have any questions or inquiries, feel free to reach out via email 📩',
-	email: 'anmolverma102002@gmail.com',
+		'Thank you for visiting 🙌 If you have any questions or inquiries, feel free to reach out via',
+	link: {
+		to: 'https://www.linkedin.com/in/anmolverma404/',
+		label: 'LinkedIn'
+	}
 };
 
 const experiences = {
