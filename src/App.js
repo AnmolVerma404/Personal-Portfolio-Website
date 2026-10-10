@@ -68,10 +68,16 @@ const App = () => {
 	const titleRef = React.useRef();
 
 	return (
-		<BrowserRouter basename={process.env.PUBLIC_URL + '/'}>
+		<BrowserRouter
+			basename={process.env.PUBLIC_URL}
+			future={{
+				v7_startTransition: true,
+				v7_relativeSplatPath: true,
+			}}
+		>
 			{navBar.show && <Navbar ref={titleRef} />}
 			<Routes>
-				<Route path="/" exact element={<Home ref={titleRef} />} />
+				<Route path="/" element={<Home ref={titleRef} />} />
 			</Routes>
 			{/* {false && <Route path="/blog" exact component={Blog} />}
       {false && <Route path="/blog/:id" component={BlogPost} />} */}
