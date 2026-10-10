@@ -1,3 +1,6 @@
+import anmolvermaImg from './anmolverma.jpeg';
+import rtCampLogo from '../assets/img/rtCamp.png';
+
 // Navigation Bar SECTION
 const navBar = {
 	show: true,
@@ -40,7 +43,7 @@ const mainBody = {
 const about = {
 	show: true,
 	heading: 'About Me',
-	imageLink: require('./anmolverma.jpeg'),
+	imageLink: anmolvermaImg,
 	imageSize: 375,
 	message:
 		"Hey there! I'm Anmol Verma, a graduate from Vellore Institute of Technology Bhopal, where I spent 2020-2024 learning the art of turning coffee into code. I majored in Computer Engineering, which is a fancy way of saying I spend a lot of time convincing computers to do what I want (and occasionally begging them to cooperate). Currently, I'm rocking the software engineering scene at rtCamp. When I'm not buried under lines of code, you can find me tinkering with projects, dreaming up the next big thing, or plotting ways to convince my computer to clean up its own bugs.",
@@ -72,12 +75,12 @@ const leadership = {
 		'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.',
 	images: [
 		{
-			img: require('../editable-stuff/anmolverma.jpeg'),
+			img: anmolvermaImg,
 			label: 'First slide label',
 			paragraph: 'Nulla vitae elit libero, a pharetra augue mollis interdum.',
 		},
 		{
-			img: require('../editable-stuff/anmolverma.jpeg'),
+			img: anmolvermaImg,
 			label: 'Second slide label',
 			paragraph: 'Nulla vitae elit libero, a pharetra augue mollis interdum.',
 		},
@@ -123,7 +126,7 @@ const experiences = {
 	data: [
 		{
 			role: 'Software Engineer',
-			companylogo: require('../assets/img/rtCamp.png'),
+			companylogo: rtCampLogo,
 			date: 'Oct 2023 – Present',
 			siteUrl: 'https://rtcamp.com/',
 		},
