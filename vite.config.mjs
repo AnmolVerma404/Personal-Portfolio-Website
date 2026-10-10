@@ -14,6 +14,19 @@ export default defineConfig({
 			'react-typist-component': 'react-typist-component/dist/index.js',
 		},
 	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				api: 'modern-compiler',
+				silenceDeprecations: [
+					'import',
+					'global-builtin',
+					'color-functions',
+					'if-function',
+				],
+			},
+		},
+	},
 	build: {
 		outDir: 'build',
 	},
