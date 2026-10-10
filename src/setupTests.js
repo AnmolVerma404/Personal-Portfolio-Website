@@ -10,9 +10,9 @@ global.ResizeObserver = class ResizeObserver {
 	disconnect() {}
 };
 
-jest.mock('react-typist-component', () => {
-	return function TypistMock({ children }) {
+vi.mock('react-typist-component', () => ({
+	default: function TypistMock({ children }) {
 		return children;
-	};
-}, { virtual: true });
+	},
+}));
 
