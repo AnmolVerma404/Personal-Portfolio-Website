@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router';
 import {
 	navBar,
 	mainBody,
@@ -68,13 +68,7 @@ const App = () => {
 	const titleRef = React.useRef();
 
 	return (
-		<BrowserRouter
-			basename={process.env.PUBLIC_URL}
-			future={{
-				v7_startTransition: true,
-				v7_relativeSplatPath: true,
-			}}
-		>
+		<BrowserRouter basename={process.env.PUBLIC_URL}>
 			{navBar.show && <Navbar ref={titleRef} />}
 			<Routes>
 				<Route path="/" element={<Home ref={titleRef} />} />
