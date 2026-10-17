@@ -11,20 +11,7 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			'@': fileURLToPath(new URL('./src', import.meta.url)),
-			'~bootstrap': 'bootstrap',
 			'react-typist-component': 'react-typist-component/dist/index.js',
-		},
-	},
-	css: {
-		preprocessorOptions: {
-			scss: {
-				silenceDeprecations: [
-					'import',
-					'global-builtin',
-					'color-functions',
-					'if-function',
-				],
-			} as any,
 		},
 	},
 	build: {
