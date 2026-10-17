@@ -2,8 +2,16 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Typist from 'react-typist-component';
 import { Jumbotron } from './migration';
+import { type SocialIcon } from '../../editable-stuff/config';
 
-const MainBody = React.forwardRef(
+export interface MainBodyProps {
+	gradient: string;
+	title: string;
+	message: string;
+	icons: SocialIcon[];
+}
+
+const MainBody = React.forwardRef<HTMLHeadingElement, MainBodyProps>(
 	({ gradient, title, message, icons }, ref) => {
 		return (
 			<Jumbotron
@@ -33,8 +41,6 @@ const MainBody = React.forwardRef(
 								aria-label={`My ${icon.image.split('-')[1]}`}
 							>
 								<i className={`fab ${icon.image}  fa-3x socialicons`} />
-								{/* <FontAwesomeIcon icon="fa-brands fa-hashnode" /> */}
-								{/* <FontAwesomeIcon icon={`fa-brands ${icon.image}`} /> */}
 							</a>
 						))}
 					</div>
@@ -53,3 +59,4 @@ const MainBody = React.forwardRef(
 );
 
 export default MainBody;
+

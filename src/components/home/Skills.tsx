@@ -6,14 +6,21 @@ import Row from 'react-bootstrap/Row';
 import { Jumbotron } from './migration';
 import { Container } from 'react-bootstrap';
 import { useScrollPosition } from '../../hooks/useScrollPosition';
+import { type Skill } from '../../editable-stuff/config';
 
-const Skills = React.forwardRef(
+export interface SkillsProps {
+	heading: string;
+	hardSkills: Skill[];
+	showHardSkills: boolean;
+}
+
+const Skills = React.forwardRef<HTMLDivElement, SkillsProps>(
 	({ heading, hardSkills, showHardSkills }, ref) => {
-		const skillsTabRef = React.useRef(null);
+		const skillsTabRef = React.useRef<HTMLDivElement | null>(null);
 		const [isScrolled, setIsScrolled] = React.useState(false);
 
 		useScrollPosition(
-			({ prevPos, currPos }) => {
+			({ currPos }) => {
 				if (!isScrolled && currPos.y - 400 < 0) setIsScrolled(true);
 			},
 			[],
@@ -22,7 +29,7 @@ const Skills = React.forwardRef(
 		return (
 			<Jumbotron ref={skillsTabRef} fluid className="bg-white m-0" id="skills">
 				<Container className="p-5 ">
-					<h2 ref={skillsTabRef} className="display-4 pb-5 text-center">
+					<h2 className="display-4 pb-5 text-center">
 						{heading}
 					</h2>
 					<Tabs
@@ -50,3 +57,4 @@ const Skills = React.forwardRef(
 );
 
 export default Skills;
+

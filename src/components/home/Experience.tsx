@@ -2,8 +2,16 @@ import React from 'react';
 import ExperienceCard from './ExperienceCard';
 import { Jumbotron } from './migration';
 import { Container, Row } from 'react-bootstrap';
+import { type ExperienceItem } from '../../editable-stuff/config';
 
-const Experience = ({ experiences }) => {
+export interface ExperienceProps {
+	experiences: {
+		heading: string;
+		data: ExperienceItem[];
+	};
+}
+
+const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
 	return (
 		<section className="section experience" id="experiences">
 			<Container>
@@ -23,3 +31,4 @@ const Experience = ({ experiences }) => {
 };
 
 export default Experience;
+

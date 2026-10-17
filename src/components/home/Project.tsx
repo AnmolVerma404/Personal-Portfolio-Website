@@ -2,39 +2,44 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Jumbotron } from './migration';
 import Row from 'react-bootstrap/Row';
-import ProjectCard from './ProjectCard';
+import ProjectCard, { type RepositoryData } from './ProjectCard';
 import axios from 'axios';
 
 const API = 'https://api.github.com';
 
-const Project = ({ heading, username, length, specfic }) => {
+export interface ProjectProps {
+	heading: string;
+	username: string;
+	length: number;
+	specfic?: string[];
+}
+
+const Project: React.FC<ProjectProps> = ({ heading, username, length, specfic }) => {
 	const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
 	const specficReposAPI = `${API}/repos/${username}`;
 
-	const [projectsArray, setProjectsArray] = useState([]);
+	const [projectsArray, setProjectsArray] = useState<RepositoryData[]>([]);
 
 	const fetchRepos = useCallback(async () => {
-		let repoList = [];
+		let repoList: RepositoryData[] = [];
 		try {
-			// getting all repos if length is specified
 			if (length > 0) {
 				const response = await axios.get(allReposAPI);
 				repoList = [...response.data.slice(0, length)];
 			}
-			// adding specified repos
 			if (specfic && specfic.length) {
-				for (let repoName of specfic) {
+				for (const repoName of specfic) {
 					try {
 						const response = await axios.get(`${specficReposAPI}/${repoName}`);
 						repoList.push(response.data);
-					} catch (error) {
-						console.error(error.message);
+					} catch (error: any) {
+						console.error(error?.message);
 					}
 				}
 			}
 			setProjectsArray(repoList);
-		} catch (error) {
-			console.error(error.message);
+		} catch (error: any) {
+			console.error(error?.message);
 		}
 	}, [allReposAPI, length, specfic, specficReposAPI]);
 
@@ -65,3 +70,4 @@ const Project = ({ heading, username, length, specfic }) => {
 };
 
 export default Project;
+

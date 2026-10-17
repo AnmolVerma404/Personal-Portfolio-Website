@@ -1,13 +1,19 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import SkillsBar from './SkillsBar';
+import { type Skill } from '../../editable-stuff/config';
 
-function SkillsSection({ skills, isScrolled }) {
+interface SkillsSectionProps {
+	skills: Skill[];
+	isScrolled: boolean;
+}
+
+function SkillsSection({ skills, isScrolled }: SkillsSectionProps) {
 	return (
 		<>
 			{skills.map((skill, index) => (
 				<SkillsBar
-					key={`${skill}-${index}`}
+					key={`${skill.name}-${index}`}
 					skill={skill.name}
 					value={skill.value}
 					isScrolled={isScrolled}
@@ -17,7 +23,12 @@ function SkillsSection({ skills, isScrolled }) {
 	);
 }
 
-function SkillsTab({ skills, isScrolled }) {
+export interface SkillsTabProps {
+	skills: Skill[];
+	isScrolled: boolean;
+}
+
+function SkillsTab({ skills, isScrolled }: SkillsTabProps) {
 	return (
 		<>
 			<Col xs={12} md={6}>
@@ -37,3 +48,4 @@ function SkillsTab({ skills, isScrolled }) {
 }
 
 export default SkillsTab;
+

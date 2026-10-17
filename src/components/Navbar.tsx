@@ -9,33 +9,38 @@ import {
 	about,
 	skills,
 	experiences,
-} from '../editable-stuff/config.js';
+} from '../editable-stuff/config';
 import { NavLink } from './home/migration';
 
-const Navigation = React.forwardRef((props, ref) => {
-	// const { showBlog, FirstName } = config;
+export interface NavigationProps {}
+
+const Navigation = React.forwardRef<HTMLElement, NavigationProps>((props, ref) => {
 	const [isTop, setIsTop] = useState(true);
 	const [scrollPosition, setScrollPosition] = useState(0);
-	const navbarMenuRef = React.useRef();
+	const navbarMenuRef = React.useRef<HTMLElement | null>(null);
 	const navbarDimensions = useResizeObserver(navbarMenuRef);
 	const navBottom = navbarDimensions ? navbarDimensions.bottom : 0;
+
 	useScrollPosition(
-		({ prevPos, currPos }) => {
-			if (!navbarDimensions) return;
+		({ currPos }) => {
+			if (!navbarDimensions || !ref || !('current' in ref) || !ref.current) return;
 			currPos.y + ref.current.offsetTop - navbarDimensions.bottom > 5
 				? setIsTop(true)
 				: setIsTop(false);
 			setScrollPosition(currPos.y);
 		},
-		[navBottom]
+		[navBottom],
+		navbarMenuRef
 	);
 
 	React.useEffect(() => {
-		if (!navbarDimensions) return;
+		if (!navbarDimensions || !ref || !('current' in ref) || !ref.current) return;
 		navBottom - scrollPosition >= ref.current.offsetTop
 			? setIsTop(false)
 			: setIsTop(true);
 	}, [navBottom, navbarDimensions, ref, scrollPosition]);
+
+	const baseUrl = import.meta.env.BASE_URL;
 
 	return (
 		<Navbar
@@ -47,7 +52,7 @@ const Navigation = React.forwardRef((props, ref) => {
 		>
 			<Navbar.Brand
 				className="navbar-brand"
-				href={process.env.PUBLIC_URL + '/#home'}
+				href={`${baseUrl}#home`}
 			>
 				{`<${mainBody.firstName} />`}
 			</Navbar.Brand>
@@ -57,7 +62,7 @@ const Navigation = React.forwardRef((props, ref) => {
 					{about.show && (
 						<NavLink
 							className="nav-item lead"
-							href={process.env.PUBLIC_URL + '/#aboutme'}
+							href={`${baseUrl}#aboutme`}
 						>
 							About
 						</NavLink>
@@ -65,28 +70,30 @@ const Navigation = React.forwardRef((props, ref) => {
 					{experiences.show && (
 						<NavLink
 							className="nav-item lead"
-							href={process.env.PUBLIC_URL + '/#experiences'}
+							href={`${baseUrl}#experiences`}
 						>
 							Experience
 						</NavLink>
 					)}
-					<NavLink
-						className="nav-item lead"
-						href={about.resume}
-						target="_blank"
-						rel="noreferrer noopener"
-					>
-						Resume
-					</NavLink>
+					{about.resume && (
+						<NavLink
+							className="nav-item lead"
+							href={about.resume}
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							Resume
+						</NavLink>
+					)}
 					{repos.show && (
-						<NavLink href={process.env.PUBLIC_URL + '/#projects'}>
+						<NavLink href={`${baseUrl}#projects`}>
 							Projects
 						</NavLink>
 					)}
 					{skills.show && (
 						<NavLink
 							className="nav-item lead"
-							href={process.env.PUBLIC_URL + '/#skills'}
+							href={`${baseUrl}#skills`}
 						>
 							Skills
 						</NavLink>
@@ -98,3 +105,4 @@ const Navigation = React.forwardRef((props, ref) => {
 });
 
 export default Navigation;
+

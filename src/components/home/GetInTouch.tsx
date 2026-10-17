@@ -1,4 +1,15 @@
-const GetInTouch = ({ heading, message, link }) => {
+import React from 'react';
+
+export interface GetInTouchProps {
+	heading: string;
+	message: string;
+	link?: {
+		to: string;
+		label: string;
+	};
+}
+
+const GetInTouch: React.FC<GetInTouchProps> = ({ heading, message, link }) => {
 	return (
 		<>
 			<h2 className="display-4 pb-3 text-center">{heading}</h2>
@@ -13,3 +24,4 @@ const GetInTouch = ({ heading, message, link }) => {
 };
 
 export default GetInTouch;
+

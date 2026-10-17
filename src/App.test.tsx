@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 import Project from './components/home/Project';
 
@@ -13,3 +13,4 @@ test('hides Project section when projects are empty or rate-limited', () => {
 	);
 	expect(container.firstChild).toBeNull();
 });
+

@@ -1,8 +1,12 @@
 import React from 'react';
-
 import { Col } from 'react-bootstrap';
+import { type ExperienceItem } from '../../editable-stuff/config';
 
-const ExperienceCard = ({ data }) => {
+export interface ExperienceCardProps {
+	data: ExperienceItem;
+}
+
+const ExperienceCard: React.FC<ExperienceCardProps> = ({ data }) => {
 	const ImgElement = (
 		<img
 			className="bg-white mb-3 experience__row__img"
@@ -25,3 +29,4 @@ const ExperienceCard = ({ data }) => {
 };
 
 export default ExperienceCard;
+

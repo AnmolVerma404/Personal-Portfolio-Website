@@ -4,14 +4,29 @@ import Card from 'react-bootstrap/Card';
 import Skeleton from 'react-loading-skeleton';
 import axios from 'axios';
 
-const ProjectCard = ({ value }) => {
+export interface RepositoryData {
+	name?: string;
+	description?: string;
+	svn_url?: string;
+	stargazers_count?: number;
+	languages_url?: string;
+	pushed_at?: string;
+	[key: string]: any;
+}
+
+export interface ProjectCardProps {
+	id?: string;
+	value: RepositoryData;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ value }) => {
 	const {
 		name,
 		description,
 		svn_url,
-		stargazers_count,
+		stargazers_count = 0,
 		languages_url,
-		pushed_at,
+		pushed_at = '',
 	} = value;
 	return (
 		<Col md={6}>
@@ -25,12 +40,12 @@ const ProjectCard = ({ value }) => {
 					</Card.Text>
 					{svn_url ? <CardButtons svn_url={svn_url} /> : <Skeleton count={2} />}
 					<hr />
-					{languages_url ? (
+					{languages_url && svn_url ? (
 						<Language languages_url={languages_url} repo_url={svn_url} />
 					) : (
 						<Skeleton count={3} />
 					)}
-					{value ? (
+					{value && svn_url ? (
 						<CardFooter
 							star_count={stargazers_count}
 							repo_url={svn_url}
@@ -45,7 +60,7 @@ const ProjectCard = ({ value }) => {
 	);
 };
 
-const CardButtons = ({ svn_url }) => {
+const CardButtons: React.FC<{ svn_url: string }> = ({ svn_url }) => {
 	return (
 		<div className="d-grid gap-2 d-md-block">
 			<a
@@ -65,15 +80,18 @@ const CardButtons = ({ svn_url }) => {
 	);
 };
 
-const Language = ({ languages_url, repo_url }) => {
-	const [data, setData] = useState([]);
+const Language: React.FC<{ languages_url: string; repo_url: string }> = ({
+	languages_url,
+	repo_url,
+}) => {
+	const [data, setData] = useState<Record<string, number>>({});
 
 	const handleRequest = useCallback(async () => {
 		try {
 			const response = await axios.get(languages_url);
-			return setData(response.data);
-		} catch (error) {
-			console.error(error.message);
+			setData(response.data);
+		} catch (error: any) {
+			console.error(error?.message);
 		}
 	}, [languages_url]);
 
@@ -81,9 +99,9 @@ const Language = ({ languages_url, repo_url }) => {
 		handleRequest();
 	}, [handleRequest]);
 
-	const array = [];
+	const array: string[] = [];
 	let total_count = 0;
-	for (let index in data) {
+	for (const index in data) {
 		array.push(index);
 		total_count += data[index];
 	}
@@ -111,7 +129,11 @@ const Language = ({ languages_url, repo_url }) => {
 	);
 };
 
-const CardFooter = ({ star_count, repo_url, pushed_at }) => {
+const CardFooter: React.FC<{
+	star_count: number;
+	repo_url: string;
+	pushed_at: string;
+}> = ({ star_count, repo_url, pushed_at }) => {
 	const [updated_at, setUpdated_at] = useState('0 mints');
 
 	const handleUpdatetime = useCallback(() => {
@@ -122,10 +144,10 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
 
 		if (hours < 24) {
 			if (hours < 1) return setUpdated_at('just now');
-			let measurement = hours === 1 ? 'hour' : 'hours';
+			const measurement = hours === 1 ? 'hour' : 'hours';
 			return setUpdated_at(`${hours.toString()} ${measurement} ago`);
 		} else {
-			const options = { day: 'numeric', month: 'long', year: 'numeric' };
+			const options: Intl.DateTimeFormatOptions = { day: 'numeric', month: 'long', year: 'numeric' };
 			const time = new Intl.DateTimeFormat('en-US', options).format(date);
 			return setUpdated_at(`on ${time}`);
 		}
@@ -153,3 +175,4 @@ const CardFooter = ({ star_count, repo_url, pushed_at }) => {
 };
 
 export default ProjectCard;
+
