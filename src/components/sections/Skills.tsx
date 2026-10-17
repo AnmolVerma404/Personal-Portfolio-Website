@@ -8,8 +8,6 @@ export interface Skill {
 	value: number;
 }
 
-const HEADING = 'Skills';
-
 const HARD_SKILLS: readonly Skill[] = [
 	{ name: 'C++', value: 90 },
 	{ name: 'Data Structures', value: 85 },
@@ -56,7 +54,7 @@ export const Skills: React.FC<SkillsProps> = () => {
 		<Section id="skills" className="bg-white">
 			<div ref={sectionRef}>
 				<h2 className="text-display-4 mb-10 text-center text-[#212529]">
-					{HEADING}
+					Skills
 				</h2>
 				<Tabs defaultValue="hard-skills" className="w-full">
 					<TabsList className="w-full justify-center bg-[#f8f9fa] border border-[#dee2e6] rounded-lg p-1">

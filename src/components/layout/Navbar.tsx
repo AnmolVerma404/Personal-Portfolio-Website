@@ -9,8 +9,6 @@ import {
 } from '@/components/ui/sheet';
 import { ResumeNavLink } from '@/components/resume/ResumeNavLink';
 
-const BRAND_NAME = 'Anmol';
-
 export interface NavbarProps {
 	heroTitleRef?: React.RefObject<HTMLElement | null>;
 }
@@ -63,7 +61,7 @@ export const Navbar: React.FC<NavbarProps> = ({ heroTitleRef }) => {
 					href={`${baseUrl}#home`}
 					className="text-xl font-medium tracking-tight text-[#212529] hover:opacity-80 transition-opacity"
 				>
-					{`<${BRAND_NAME} />`}
+					{'<Anmol />'}
 				</a>
 
 				{/* Desktop Navigation */}
@@ -112,7 +110,7 @@ export const Navbar: React.FC<NavbarProps> = ({ heroTitleRef }) => {
 						<SheetContent side="right" className="w-72 bg-white p-6">
 							<SheetHeader className="mb-6 text-left">
 								<SheetTitle className="text-lg font-medium text-[#212529]">
-									{`<${BRAND_NAME} />`}
+									{'<Anmol />'}
 								</SheetTitle>
 							</SheetHeader>
 							<div className="flex flex-col gap-5">

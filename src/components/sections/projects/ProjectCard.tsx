@@ -164,8 +164,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
 				>
 					<FontAwesomeIcon icon={faGithub} className="size-3.5" />
 					<span>Stars</span>
-					<Badge variant="default" className="h-5 px-1.5 text-[10px] bg-[#212529] text-white">
-						{stargazers_count}
+					<Badge
+						variant="default"
+						className="px-2 py-0.5 text-[11px] font-bold bg-[#212529] text-white rounded-full leading-none"
+					>
+						{stargazers_count ?? 0}
 					</Badge>
 				</a>
 				<span>Updated {formatUpdatedAt(pushed_at)}</span>

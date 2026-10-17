@@ -4,23 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 
-const GET_IN_TOUCH_HEADING = 'Get In Touch';
-const GET_IN_TOUCH_MESSAGE =
-	'Thank you for visiting 🙌 If you have any questions or inquiries, feel free to reach out via';
-const LINKEDIN_URL = 'https://www.linkedin.com/in/anmolverma404/';
-
-export interface FooterProps {}
-
-export const Footer: React.FC<FooterProps> = () => {
+export const Footer: React.FC = () => {
 	return (
 		<footer className="mt-auto bg-[#f5f5f5] py-12 text-center text-[#212529]">
 			<div className="container mx-auto max-w-4xl px-4">
 				<div className="mb-10">
-					<h2 className="text-display-4 mb-4">{GET_IN_TOUCH_HEADING}</h2>
+					<h2 className="text-display-4 mb-4">Get In Touch</h2>
 					<p className="text-lead text-[#212529] font-light">
-						{GET_IN_TOUCH_MESSAGE}{' '}
+						Thank you for visiting 🙌 If you have any questions or inquiries, feel free to reach out via{' '}
 						<a
-							href={LINKEDIN_URL}
+							href="https://www.linkedin.com/in/anmolverma404/"
 							target="_blank"
 							rel="noopener noreferrer"
 							className="text-[#0d6efd] hover:underline"
@@ -54,4 +47,3 @@ export const Footer: React.FC<FooterProps> = () => {
 };
 
 export default Footer;
-

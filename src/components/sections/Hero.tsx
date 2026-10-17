@@ -15,13 +15,6 @@ export interface SocialIconItem {
 	label: string;
 }
 
-const GRADIENT_COLORS = '#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1';
-const FIRST_NAME = 'Anmol';
-const MIDDLE_NAME = '';
-const LAST_NAME = 'Verma';
-const TITLE = `${FIRST_NAME} ${MIDDLE_NAME ? MIDDLE_NAME + ' ' : ''}${LAST_NAME}`;
-const MESSAGE = ' I Code :) Quotes not found 404 ;) ';
-
 const SOCIAL_ICONS: readonly SocialIconItem[] = [
 	{
 		icon: faGithub,
@@ -49,19 +42,23 @@ export const Hero: React.FC<HeroProps> = ({ headingRef }) => {
 		<section
 			id="home"
 			style={{
-				background: `linear-gradient(136deg, ${GRADIENT_COLORS})`,
+				background:
+					'linear-gradient(136deg, #4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1)',
 				backgroundSize: '1200% 1200%',
 			}}
 			className="relative flex min-h-screen items-center justify-center bg-transparent animate-[BackgroundAnimation_70s_ease_infinite] text-white"
 		>
 			<div id="stars"></div>
 			<div className="container relative z-10 mx-auto px-4 text-center">
-				<h1 ref={headingRef} className="text-display-1 font-light tracking-tight text-white mb-2">
-					{TITLE}
+				<h1
+					ref={headingRef}
+					className="text-display-1 font-light tracking-tight text-white mb-2"
+				>
+					Anmol Verma
 				</h1>
 				<Typist>
 					<div className="text-lead font-light text-white/95 min-h-[6rem] sm:min-h-[4rem] md:min-h-[2.5rem]">
-						{MESSAGE}
+						{' '}I Code :) Quotes not found 404 ;) {' '}
 					</div>
 				</Typist>
 				<div className="flex items-center justify-center gap-6 py-8">

@@ -1,6 +1,7 @@
 import { render, screen, cleanup, act } from '@testing-library/react';
 import App from './App';
 import Projects from './components/sections/projects/Projects';
+import ProjectCard from './components/sections/projects/ProjectCard';
 import ResumeButton from './components/resume/ResumeButton';
 import ResumeNavLink from './components/resume/ResumeNavLink';
 
@@ -95,5 +96,22 @@ describe('App and Core Components', () => {
 		});
 
 		expect(container!.firstChild).toBeNull();
+	});
+
+	test('renders ProjectCard with correct star count badge', () => {
+		const { getByText } = render(
+			<ProjectCard
+				repo={{
+					name: 'TicketOps',
+					description: 'Sample description',
+					html_url: 'https://github.com/test',
+					stargazers_count: 2,
+					languages_url: '',
+					pushed_at: '2026-01-01',
+				}}
+			/>
+		);
+		const starBadge = getByText('2');
+		expect(starBadge).toBeTruthy();
 	});
 });

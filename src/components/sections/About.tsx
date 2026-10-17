@@ -3,11 +3,6 @@ import { Section } from '@/components/layout/Section';
 import anmolvermaImg from '@/assets/img/anmolverma.jpeg';
 import { ResumeButton } from '@/components/resume/ResumeButton';
 
-const HEADING = 'About Me';
-const IMAGE_SIZE = 375;
-const MESSAGE =
-	"Hey there! I'm Anmol Verma, a graduate from Vellore Institute of Technology Bhopal, where I spent 2020-2024 learning the art of turning coffee into code. I majored in Computer Engineering, which is a fancy way of saying I spend a lot of time convincing computers to do what I want (and occasionally begging them to cooperate). Currently, I'm rocking the software engineering scene at rtCamp. When I'm not buried under lines of code, you can find me tinkering with projects, dreaming up the next big thing, or plotting ways to convince my computer to clean up its own bugs.";
-
 export interface AboutProps {}
 
 export const About: React.FC<AboutProps> = () => {
@@ -19,13 +14,22 @@ export const About: React.FC<AboutProps> = () => {
 						className="rounded-full border border-secondary object-cover shadow-sm"
 						src={anmolvermaImg}
 						alt="profilepicture"
-						width={IMAGE_SIZE}
-						height={IMAGE_SIZE}
+						width={375}
+						height={375}
 					/>
 				</div>
 				<div className="lg:col-span-7 text-center">
-					<h2 className="text-display-4 mb-8">{HEADING}</h2>
-					<p className="text-lead text-[#212529] mb-6">{MESSAGE}</p>
+					<h2 className="text-display-4 mb-8">About Me</h2>
+					<p className="text-lead text-[#212529] mb-6">
+						Hey there! I'm Anmol Verma, a graduate from Vellore Institute of Technology Bhopal,
+						where I spent 2020-2024 learning the art of turning coffee into code. I majored in
+						Computer Engineering, which is a fancy way of saying I spend a lot of time
+						convincing computers to do what I want (and occasionally begging them to
+						cooperate). Currently, I'm rocking the software engineering scene at rtCamp.
+						When I'm not buried under lines of code, you can find me tinkering with projects,
+						dreaming up the next big thing, or plotting ways to convince my computer to clean
+						up its own bugs.
+					</p>
 					<ResumeButton />
 				</div>
 			</div>
@@ -34,4 +38,3 @@ export const About: React.FC<AboutProps> = () => {
 };
 
 export default About;
-

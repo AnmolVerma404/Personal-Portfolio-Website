@@ -7,16 +7,6 @@ import {
 	type GitHubRepo,
 } from './github';
 
-const HEADING = 'Pinned Repository';
-const GITHUB_USERNAME = 'AnmolVerma404';
-const REPOS_LENGTH = 0;
-const SPECIFIC_REPOS: readonly string[] = [
-	'TicketOps',
-	'Healthy-HearTechs',
-	'MapMyPath',
-	'Data-Structures-and-Algorithms',
-];
-
 export interface ProjectsProps {
 	heading?: string;
 	username?: string;
@@ -24,11 +14,18 @@ export interface ProjectsProps {
 	specfic?: readonly string[];
 }
 
+const DEFAULT_SPECIFIC_REPOS: readonly string[] = [
+	'TicketOps',
+	'Healthy-HearTechs',
+	'MapMyPath',
+	'Data-Structures-and-Algorithms',
+];
+
 export const Projects: React.FC<ProjectsProps> = ({
-	heading = HEADING,
-	username = GITHUB_USERNAME,
-	length = REPOS_LENGTH,
-	specfic = SPECIFIC_REPOS,
+	heading = 'Pinned Repository',
+	username = 'AnmolVerma404',
+	length = 0,
+	specfic = DEFAULT_SPECIFIC_REPOS,
 }) => {
 	const [repos, setRepos] = useState<GitHubRepo[]>([]);
 
