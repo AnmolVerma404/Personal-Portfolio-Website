@@ -155,7 +155,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ repo }) => {
 				</CardContent>
 			</div>
 
-			<CardFooter className="flex items-center justify-between border-t border-[#dee2e6] p-0 pt-3 text-xs text-[#6c757d]">
+			<CardFooter className="flex items-center justify-between border-t border-[#dee2e6] p-0 py-3 text-xs text-[#6c757d] bg-transparent">
 				<a
 					href={`${html_url}/stargazers`}
 					target="_blank"

@@ -14,7 +14,7 @@ const HARD_SKILLS: readonly Skill[] = [
 	{ name: 'Python', value: 70 },
 	{ name: 'TypeScript', value: 70 },
 	{ name: 'React', value: 65 },
-	{ name: 'HTML/CSS', value: 80 },
+	{ name: 'Agentic AI Development', value: 85 },
 	{ name: 'PHP', value: 90 },
 	{ name: 'DevOps', value: 50 },
 ];
