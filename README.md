@@ -2,58 +2,68 @@
 
 ## Introduction
 
-This is a portfolio website created using React and SCSS. The website showcases my work and experience as a software engineer.
+This is a personal developer portfolio website showcasing my work, projects, skills, and experience as a software engineer.
 
 ## Technologies Used
 
-- React
-- SCSS
+- **React 19**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS v4**
+- **shadcn/ui** (Base UI primitives + Lucide icons)
+- **FontAwesome** (Brand icons)
+- **Vitest** & **React Testing Library**
 
 ## Features
 
-- Responsive design
-- Dynamic content rendering
-- Clean and user-friendly interface
+- Responsive mobile-first design with smooth navigation drawer
+- Dynamic GitHub pinned repository fetching via native `fetch`
+- Interactive skills visualization with scroll-triggered animations
+- Canvas and CSS star animation with animated gradient hero background
+- Modular section architecture
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+### Prerequisites
 
-## Prerequisites
+Ensure you have **Node.js** (v18+) and **NPM** installed.
 
-Before you begin, make sure you have the following software installed on your system:
+### Installing & Running Locally
 
--- Node.js
--- NPM
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AnmolVerma404/Personal-Portfolio-Website.git
+   cd Personal-Portfolio-Website
+   ```
 
-## Installing
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-To get started, follow these steps:
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+   Open `http://localhost:3000/Personal-Portfolio-Website/` in your browser.
 
-1. Clone the repository to your local machine:
+4. Run tests or build:
+   ```bash
+   npm test
+   npm run build
+   ```
 
-```
-git clone https://github.com/AnmolVerma404/Personal-Portfolio-Website.git
-```
+## Customization
 
-1. Navigate to the project directory:
+### Section Content
+All section content is inlined directly in the corresponding component for direct control and maintainability:
+- **Hero**: `src/components/sections/Hero.tsx`
+- **About**: `src/components/sections/About.tsx`
+- **Experience**: `src/components/sections/Experience.tsx`
+- **Projects**: `src/components/sections/projects/Projects.tsx`
+- **Skills**: `src/components/sections/Skills.tsx`
+- **Footer**: `src/components/layout/Footer.tsx`
 
-```
-cd Personal-Portfolio-Website
-```
-
-1. Install the required packages:
-
-```
-npm install
-```
-
-1. Start the development server:
-
-```
-npm start
-```
-
-## About Me
-
-My name is Anmol Verma. I’m a graduate of 2020-2024 from Vellore Institute of Technology Bhopal with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on projects.
+### Resume Link
+The Resume components (`ResumeNavLink` in Navbar and `ResumeButton` in About) are configured in `src/components/resume/resume.ts`.
+By default, `RESUME_URL` is unset (`undefined`), keeping the resume private and preventing resume links/buttons from rendering. To enable public resume links, set `RESUME_URL` to a valid document URL or path.
