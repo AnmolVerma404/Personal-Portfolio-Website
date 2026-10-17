@@ -1,6 +1,6 @@
 import { render, screen, cleanup } from '@testing-library/react';
 import App from './App';
-import Project from './components/home/Project';
+import Projects from './components/sections/projects/Projects';
 import ResumeButton from './components/resume/ResumeButton';
 import ResumeNavLink from './components/resume/ResumeNavLink';
 
@@ -36,7 +36,7 @@ test('ResumeNavLink renders link when href is explicitly provided', () => {
 
 test('hides Project section when projects are empty or rate-limited', () => {
 	const { container } = render(
-		<Project heading="Pinned Repository" username="test" length={0} specfic={[]} />
+		<Projects heading="Pinned Repository" username="test" length={0} specfic={[]} />
 	);
 	expect(container.firstChild).toBeNull();
 });

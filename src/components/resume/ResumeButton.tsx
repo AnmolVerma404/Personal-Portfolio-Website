@@ -1,5 +1,6 @@
 import React from 'react';
-import { RESUME_URL } from './resume';
+import { RESUME_URL } from '@/components/resume/resume';
+import { Button } from '@/components/ui/button';
 
 export interface ResumeButtonProps {
 	href?: string;
@@ -13,20 +14,27 @@ export const ResumeButton: React.FC<ResumeButtonProps> = ({
 	if (!href) return null;
 
 	return (
-		<p className="lead text-center">
-			<a
-				className={`btn btn-outline-dark btn-lg ${className ?? ''}`}
-				href={href}
-				target="_blank"
-				rel="noreferrer noopener"
-				role="button"
-				aria-label="Resume/CV"
-			>
-				Resume
-			</a>
-		</p>
+		<div className="mt-4 flex justify-center">
+			<Button
+				variant="outline"
+				size="lg"
+				nativeButton={false}
+				className={className}
+				render={props => (
+					<a
+						{...props}
+						href={href}
+						target="_blank"
+						rel="noreferrer noopener"
+						role="button"
+						aria-label="Resume/CV"
+					>
+						Resume
+					</a>
+				)}
+			/>
+		</div>
 	);
 };
 
 export default ResumeButton;
-

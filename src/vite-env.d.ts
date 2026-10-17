@@ -10,6 +10,7 @@ declare module 'react-typist-component' {
 		pause?: number;
 		onTypingDone?: () => void;
 	}>;
+	export { Typist };
 	export default Typist;
 }
 
