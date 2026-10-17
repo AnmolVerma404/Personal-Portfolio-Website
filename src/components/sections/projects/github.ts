@@ -52,7 +52,9 @@ export async function fetchLanguages(
 }
 
 export function formatUpdatedAt(pushedAt: string): string {
+	if (!pushedAt) return '';
 	const date = new Date(pushedAt);
+	if (Number.isNaN(date.getTime())) return '';
 	const now = new Date();
 	const diff = now.getTime() - date.getTime();
 	const hours = Math.trunc(diff / 1000 / 60 / 60);

@@ -10,6 +10,19 @@ globalThis.ResizeObserver = class ResizeObserver {
 	disconnect() {}
 };
 
+globalThis.IntersectionObserver = class IntersectionObserver {
+	readonly root: Element | Document | null = null;
+	readonly rootMargin: string = '';
+	readonly scrollMargin: string = '';
+	readonly thresholds: ReadonlyArray<number> = [];
+	observe() {}
+	unobserve() {}
+	disconnect() {}
+	takeRecords() {
+		return [];
+	}
+} as unknown as typeof globalThis.IntersectionObserver;
+
 vi.mock('react-typist-component', () => ({
 	default: function TypistMock({ children }: { children?: React.ReactNode }) {
 		return children;

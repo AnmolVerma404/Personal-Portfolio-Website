@@ -22,11 +22,13 @@ const Home: React.FC<{ heroTitleRef: React.RefObject<HTMLHeadingElement | null> 
 	);
 };
 
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 const App: React.FC = () => {
 	const heroTitleRef = useRef<HTMLHeadingElement | null>(null);
 
 	return (
-		<BrowserRouter basename={import.meta.env.BASE_URL}>
+		<BrowserRouter basename={basename}>
 			<Navbar heroTitleRef={heroTitleRef} />
 			<Routes>
 				<Route path="/" element={<Home heroTitleRef={heroTitleRef} />} />
