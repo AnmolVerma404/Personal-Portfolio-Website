@@ -1,10 +1,14 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
 import SkillsBar from './SkillsBar';
-import { type Skill } from '../../editable-stuff/config';
+
+export interface Skill {
+	name: string;
+	value: number;
+}
 
 interface SkillsSectionProps {
-	skills: Skill[];
+	skills: readonly Skill[];
 	isScrolled: boolean;
 }
 
@@ -24,7 +28,7 @@ function SkillsSection({ skills, isScrolled }: SkillsSectionProps) {
 }
 
 export interface SkillsTabProps {
-	skills: Skill[];
+	skills: readonly Skill[];
 	isScrolled: boolean;
 }
 
@@ -48,4 +52,3 @@ function SkillsTab({ skills, isScrolled }: SkillsTabProps) {
 }
 
 export default SkillsTab;
-

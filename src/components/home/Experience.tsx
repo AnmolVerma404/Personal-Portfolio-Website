@@ -1,26 +1,32 @@
 import React from 'react';
-import ExperienceCard from './ExperienceCard';
+import ExperienceCard, { type ExperienceItem } from './ExperienceCard';
 import { Jumbotron } from './migration';
 import { Container, Row } from 'react-bootstrap';
-import { type ExperienceItem } from '../../editable-stuff/config';
+import rtCampLogo from '../../assets/img/rtCamp.png';
 
-export interface ExperienceProps {
-	experiences: {
-		heading: string;
-		data: ExperienceItem[];
-	};
-}
+const HEADING = 'Experiences';
 
-const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
+const EXPERIENCES: readonly ExperienceItem[] = [
+	{
+		role: 'Software Engineer',
+		companylogo: rtCampLogo,
+		date: 'Oct 2023 – Present',
+		siteUrl: 'https://rtcamp.com/',
+	},
+];
+
+export interface ExperienceProps {}
+
+const Experience: React.FC<ExperienceProps> = () => {
 	return (
 		<section className="section experience" id="experiences">
 			<Container>
 				<Jumbotron className="bg-white">
 					<h2 className="display-4 mb-5 text-center experience__heading">
-						{experiences.heading}
+						{HEADING}
 					</h2>
 					<Row className="experience__row">
-						{experiences.data.map((data, index) => {
+						{EXPERIENCES.map((data, index) => {
 							return <ExperienceCard key={index} data={data} />;
 						})}
 					</Row>
@@ -31,4 +37,3 @@ const Experience: React.FC<ExperienceProps> = ({ experiences }) => {
 };
 
 export default Experience;
-

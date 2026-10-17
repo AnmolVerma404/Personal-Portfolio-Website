@@ -1,6 +1,12 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
-import { type ExperienceItem } from '../../editable-stuff/config';
+
+export interface ExperienceItem {
+	role: string;
+	companylogo: string;
+	date: string;
+	siteUrl: string;
+}
 
 export interface ExperienceCardProps {
 	data: ExperienceItem;
@@ -17,7 +23,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ data }) => {
 	return (
 		<Col lg="6">
 			<div className="pb-5 text-center">
-				{data.siteUrl ? <a href={data.siteUrl}>{ImgElement}</a> : ImgElement}
+				{data.siteUrl ? <a href={data.siteUrl} target="_blank" rel="noopener noreferrer">{ImgElement}</a> : ImgElement}
 				<p className="lead">
 					{data.role}
 					<br />
@@ -29,4 +35,3 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ data }) => {
 };
 
 export default ExperienceCard;
-

@@ -7,14 +7,29 @@ import axios from 'axios';
 
 const API = 'https://api.github.com';
 
+const HEADING = 'Pinned Repository';
+const GITHUB_USERNAME = 'AnmolVerma404';
+const REPOS_LENGTH = 0;
+const SPECIFIC_REPOS: readonly string[] = [
+	'TicketOps',
+	'Healthy-HearTechs',
+	'MapMyPath',
+	'Data-Structures-and-Algorithms',
+];
+
 export interface ProjectProps {
-	heading: string;
-	username: string;
-	length: number;
-	specfic?: string[];
+	heading?: string;
+	username?: string;
+	length?: number;
+	specfic?: readonly string[];
 }
 
-const Project: React.FC<ProjectProps> = ({ heading, username, length, specfic }) => {
+const Project: React.FC<ProjectProps> = ({
+	heading = HEADING,
+	username = GITHUB_USERNAME,
+	length = REPOS_LENGTH,
+	specfic = SPECIFIC_REPOS,
+}) => {
 	const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
 	const specficReposAPI = `${API}/repos/${username}`;
 
@@ -70,4 +85,3 @@ const Project: React.FC<ProjectProps> = ({ heading, username, length, specfic })
 };
 
 export default Project;
-
