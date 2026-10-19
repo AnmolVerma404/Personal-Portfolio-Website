@@ -67,3 +67,37 @@ All section content is inlined directly in the corresponding component for direc
 ### Resume Link
 The Resume components (`ResumeNavLink` in Navbar and `ResumeButton` in About) are configured in `src/components/resume/resume.ts`.
 By default, `RESUME_URL` is unset (`undefined`), keeping the resume private and preventing resume links/buttons from rendering. To enable public resume links, set `RESUME_URL` to a valid document URL or path.
+
+## Knowledge Graph (`graphify`)
+
+This repository includes a persistent [Graphify](https://github.com/safishamsi/graphify) knowledge graph in `graphify-out/` (~10.2x fewer tokens per architectural query for AI coding agents).
+
+### Tracked vs. Ignored Outputs
+- **Tracked in Git:** `graphify-out/graph.json`, `graphify-out/GRAPH_REPORT.md`, and `graphify-out/.graphify_labels.json` so AI agents and collaborators have immediate graph context without rebuilding.
+- **Ignored Locally:** `graphify-out/cache/`, `manifest.json`, `cost.json`, `graph.html`, and `.graphify_*` machine-specific paths.
+
+### How & When to Keep Graphify Up to Date
+To avoid wasting AI context tokens, **do not update the graph after every small edit or chat turn**. Instead, use one of these workflows (also codified in `.agents/skills/graphify-sync/SKILL.md`):
+
+1. **End of a Feature / Coding Session (Recommended Default):**
+   Run once when your code changes are complete and ready to commit:
+   ```bash
+   graphify update .
+   ```
+   *Uses local Tree-sitter AST parsing only — completes in ~2s and costs **0 LLM tokens**.*
+
+2. **Automatic Git Post-Commit Hook (Zero Agent Overhead):**
+   Install the local git hook once so code changes automatically update `graph.json` and `GRAPH_REPORT.md` on every `git commit` outside of AI chat:
+   ```bash
+   graphify hook install
+   ```
+
+3. **After Major Documentation or Image Changes:**
+   When `.md` docs, skills, or brand images are added/updated and you want semantic edges refreshed, run `/graphify . --update` in your AI agent session (only changed non-code files are re-extracted).
+
+4. **View Interactive HTML Graph Locally:**
+   ```bash
+   graphify export html
+   ```
+   Then open `graphify-out/graph.html` in your browser.
+
