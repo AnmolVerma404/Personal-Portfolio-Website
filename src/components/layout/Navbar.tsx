@@ -46,6 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({ heroTitleRef }) => {
 		{ label: 'Experience', href: `${baseUrl}#experiences` },
 		{ label: 'Projects', href: `${baseUrl}#projects` },
 		{ label: 'Skills', href: `${baseUrl}#skills` },
+		{ label: 'Talents', href: `${baseUrl}#talents` },
 	];
 
 	return (
@@ -90,6 +91,12 @@ export const Navbar: React.FC<NavbarProps> = ({ heroTitleRef }) => {
 						className="text-lead font-light text-[#212529] hover:text-[#0d6efd] transition-colors"
 					>
 						Skills
+					</a>
+					<a
+						href={`${baseUrl}#talents`}
+						className="text-lead font-light text-[#212529] hover:text-[#0d6efd] transition-colors"
+					>
+						Talents
 					</a>
 				</nav>
 

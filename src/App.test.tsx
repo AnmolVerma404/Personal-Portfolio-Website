@@ -1,7 +1,8 @@
-import { render, screen, cleanup, act } from '@testing-library/react';
+import { render, screen, cleanup, act, fireEvent } from '@testing-library/react';
 import App from './App';
 import Projects from './components/sections/projects/Projects';
 import ProjectCard from './components/sections/projects/ProjectCard';
+import Talents from './components/sections/talents/Talents';
 import ResumeButton from './components/resume/ResumeButton';
 import ResumeNavLink from './components/resume/ResumeNavLink';
 
@@ -113,5 +114,51 @@ describe('App and Core Components', () => {
 		);
 		const starBadge = getByText('2');
 		expect(starBadge).toBeTruthy();
+	});
+
+	test('renders Talents section and supports category filtering, sidebar switching, search, and voice buttons', async () => {
+		await act(async () => {
+			render(<Talents eager />);
+		});
+
+		expect(await screen.findByText('Personal Talents')).toBeTruthy();
+		expect(await screen.findByText('Peter Griffin')).toBeTruthy();
+		expect(screen.getByText('Stewie Griffin')).toBeTruthy();
+
+		// Switch to Anime category
+		const animeTab = screen.getByRole('tab', { name: 'Anime' });
+		await act(async () => {
+			fireEvent.click(animeTab);
+		});
+
+		expect(await screen.findByText('Madara Uchiha')).toBeTruthy();
+
+		// Select One Piece from the sidebar
+		const onePieceBtn = screen.getByRole('button', { name: /One Piece/i });
+		await act(async () => {
+			fireEvent.click(onePieceBtn);
+		});
+
+		expect(await screen.findByText('Roronoa Zoro')).toBeTruthy();
+
+		// Test search filtering
+		const searchInput = screen.getByPlaceholderText('Search character or title...');
+		await act(async () => {
+			fireEvent.change(searchInput, { target: { value: 'Brook' } });
+		});
+
+		expect(screen.getByText('Brook')).toBeTruthy();
+		expect(screen.queryByText('Roronoa Zoro')).toBeNull();
+
+		// Test Real Voice and My Voice buttons
+		const realVoiceBtn = screen.getByRole('button', { name: /Real Voice/i });
+		const myVoiceBtn = screen.getByRole('button', { name: /My Voice/i });
+
+		await act(async () => {
+			fireEvent.click(realVoiceBtn);
+		});
+		await act(async () => {
+			fireEvent.click(myVoiceBtn);
+		});
 	});
 });

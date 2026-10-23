@@ -23,6 +23,15 @@ globalThis.IntersectionObserver = class IntersectionObserver {
 	}
 } as unknown as typeof globalThis.IntersectionObserver;
 
+if (typeof Element !== 'undefined' && !Element.prototype.getAnimations) {
+	Element.prototype.getAnimations = () => [];
+}
+
+if (typeof HTMLMediaElement !== 'undefined') {
+	HTMLMediaElement.prototype.play = () => Promise.resolve();
+	HTMLMediaElement.prototype.pause = () => {};
+}
+
 vi.mock('react-typist-component', () => ({
 	default: function TypistMock({ children }: { children?: React.ReactNode }) {
 		return children;

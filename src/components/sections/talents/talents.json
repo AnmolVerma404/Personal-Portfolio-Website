@@ -1,0 +1,266 @@
+{
+	"categories": [
+		{ "id": "all", "label": "All" },
+		{ "id": "movies", "label": "Movies & TV" },
+		{ "id": "anime", "label": "Anime" },
+		{ "id": "games", "label": "Games" },
+		{ "id": "real", "label": "Real People" },
+		{ "id": "beatbox", "label": "Beatbox" }
+	],
+	"sources": [
+		{
+			"id": "family-guy",
+			"category": "movies",
+			"categoryLabel": "Movies & TV",
+			"title": "Family Guy",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "peter-griffin",
+					"name": "Peter Griffin",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/family-guy/peter-griffin-real.mp3",
+					"myAudio": "talents/audio/family-guy/peter-griffin-mine.mp3"
+				},
+				{
+					"id": "stewie-griffin",
+					"name": "Stewie Griffin",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/family-guy/stewie-griffin-real.mp3",
+					"myAudio": "talents/audio/family-guy/stewie-griffin-mine.mp3"
+				},
+				{
+					"id": "brian-griffin",
+					"name": "Brian Griffin",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/family-guy/brian-griffin-real.mp3",
+					"myAudio": "talents/audio/family-guy/brian-griffin-mine.mp3"
+				},
+				{
+					"id": "quagmire",
+					"name": "Glenn Quagmire",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/family-guy/quagmire-real.mp3",
+					"myAudio": "talents/audio/family-guy/quagmire-mine.mp3"
+				},
+				{
+					"id": "joe-swanson",
+					"name": "Joe Swanson",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/family-guy/joe-swanson-real.mp3",
+					"myAudio": "talents/audio/family-guy/joe-swanson-mine.mp3"
+				},
+				{
+					"id": "herbert",
+					"name": "Herbert",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/family-guy/herbert-real.mp3",
+					"myAudio": "talents/audio/family-guy/herbert-mine.mp3"
+				}
+			]
+		},
+		{
+			"id": "dark-knight",
+			"category": "movies",
+			"categoryLabel": "Movies & TV",
+			"title": "The Dark Knight",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "joker",
+					"name": "The Joker",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/dark-knight/joker-real.mp3",
+					"myAudio": "talents/audio/dark-knight/joker-mine.mp3"
+				},
+				{
+					"id": "bane",
+					"name": "Bane",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/dark-knight/bane-real.mp3",
+					"myAudio": "talents/audio/dark-knight/bane-mine.mp3"
+				},
+				{
+					"id": "batman",
+					"name": "Batman",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/dark-knight/batman-real.mp3",
+					"myAudio": "talents/audio/dark-knight/batman-mine.mp3"
+				}
+			]
+		},
+		{
+			"id": "naruto",
+			"category": "anime",
+			"categoryLabel": "Anime",
+			"title": "Naruto Shippuden",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "madara-uchiha",
+					"name": "Madara Uchiha",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/naruto/madara-real.mp3",
+					"myAudio": "talents/audio/naruto/madara-mine.mp3"
+				},
+				{
+					"id": "pain",
+					"name": "Pain (Tendo)",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/naruto/pain-real.mp3",
+					"myAudio": "talents/audio/naruto/pain-mine.mp3"
+				},
+				{
+					"id": "itachi-uchiha",
+					"name": "Itachi Uchiha",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/naruto/itachi-real.mp3",
+					"myAudio": "talents/audio/naruto/itachi-mine.mp3"
+				},
+				{
+					"id": "kakashi",
+					"name": "Kakashi Hatake",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/naruto/kakashi-real.mp3",
+					"myAudio": "talents/audio/naruto/kakashi-mine.mp3"
+				}
+			]
+		},
+		{
+			"id": "one-piece",
+			"category": "anime",
+			"categoryLabel": "Anime",
+			"title": "One Piece",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "zoro",
+					"name": "Roronoa Zoro",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/one-piece/zoro-real.mp3",
+					"myAudio": "talents/audio/one-piece/zoro-mine.mp3"
+				},
+				{
+					"id": "doflamingo",
+					"name": "Doflamingo",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/one-piece/doflamingo-real.mp3",
+					"myAudio": "talents/audio/one-piece/doflamingo-mine.mp3"
+				},
+				{
+					"id": "brook",
+					"name": "Brook",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/one-piece/brook-real.mp3",
+					"myAudio": "talents/audio/one-piece/brook-mine.mp3"
+				}
+			]
+		},
+		{
+			"id": "gta-rdr",
+			"category": "games",
+			"categoryLabel": "Games",
+			"title": "GTA V & Red Dead II",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "arthur-morgan",
+					"name": "Arthur Morgan",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/games/arthur-morgan-real.mp3",
+					"myAudio": "talents/audio/games/arthur-morgan-mine.mp3"
+				},
+				{
+					"id": "trevor-philips",
+					"name": "Trevor Philips",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/games/trevor-philips-real.mp3",
+					"myAudio": "talents/audio/games/trevor-philips-mine.mp3"
+				}
+			]
+		},
+		{
+			"id": "god-of-war",
+			"category": "games",
+			"categoryLabel": "Games",
+			"title": "God of War",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "kratos",
+					"name": "Kratos",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/games/kratos-real.mp3",
+					"myAudio": "talents/audio/games/kratos-mine.mp3"
+				},
+				{
+					"id": "geralt",
+					"name": "Geralt of Rivia",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/games/geralt-real.mp3",
+					"myAudio": "talents/audio/games/geralt-mine.mp3"
+				}
+			]
+		},
+		{
+			"id": "celebrities",
+			"category": "real",
+			"categoryLabel": "Real People",
+			"title": "Actors & Personalities",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "morgan-freeman",
+					"name": "Morgan Freeman",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/real/morgan-freeman-real.mp3",
+					"myAudio": "talents/audio/real/morgan-freeman-mine.mp3"
+				},
+				{
+					"id": "arnold",
+					"name": "Arnold Schwarzenegger",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/real/arnold-real.mp3",
+					"myAudio": "talents/audio/real/arnold-mine.mp3"
+				}
+			]
+		},
+		{
+			"id": "beatbox-instruments",
+			"category": "beatbox",
+			"categoryLabel": "Beatbox",
+			"title": "Instruments Beatbox",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "808-liproll",
+					"name": "808 Sub-Bass Liproll",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/beatbox/808-liproll-real.mp3",
+					"myAudio": "talents/audio/beatbox/808-liproll-mine.mp3",
+					"realLabel": "Real Sound",
+					"myLabel": "My Beatbox"
+				},
+				{
+					"id": "vocal-trumpet",
+					"name": "Muted Jazz Trumpet",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/beatbox/vocal-trumpet-real.mp3",
+					"myAudio": "talents/audio/beatbox/vocal-trumpet-mine.mp3",
+					"realLabel": "Real Sound",
+					"myLabel": "My Beatbox"
+				},
+				{
+					"id": "dj-scratch",
+					"name": "Vinyl Scratch",
+					"image": "talents/images/Peter_Griffin.png",
+					"realAudio": "talents/audio/beatbox/dj-scratch-real.mp3",
+					"myAudio": "talents/audio/beatbox/dj-scratch-mine.mp3",
+					"realLabel": "Real Sound",
+					"myLabel": "My Beatbox"
+				}
+			]
+		}
+	]
+}
+

@@ -6,6 +6,7 @@ import { About } from './components/sections/About';
 import { Experience } from './components/sections/Experience';
 import { Projects } from './components/sections/projects/Projects';
 import { Skills } from './components/sections/Skills';
+import { Talents } from './components/sections/talents/Talents';
 import { Footer } from './components/layout/Footer';
 
 const Home: React.FC<{ heroTitleRef: React.RefObject<HTMLHeadingElement | null> }> = ({
@@ -18,6 +19,7 @@ const Home: React.FC<{ heroTitleRef: React.RefObject<HTMLHeadingElement | null> 
 			<Experience />
 			<Projects />
 			<Skills />
+			<Talents />
 		</main>
 	);
 };
