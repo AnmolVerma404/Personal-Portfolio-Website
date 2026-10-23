@@ -62,7 +62,23 @@ All section content is inlined directly in the corresponding component for direc
 - **Experience**: `src/components/sections/Experience.tsx`
 - **Projects**: `src/components/sections/projects/Projects.tsx`
 - **Skills**: `src/components/sections/Skills.tsx`
+- **Personal Talents**: `src/components/sections/talents/talents.json` (data catalog) and `src/components/sections/talents/Talents.tsx`
 - **Footer**: `src/components/layout/Footer.tsx`
+
+### Adding New Voices & Talents
+All categories, titles/franchises, and character impressions are managed in `src/components/sections/talents/talents.json` so you never need to edit JSX code to add new voices:
+1. Place character images in `public/talents/images/` and audio clips in `public/talents/audio/`.
+2. Add a new character entry under the corresponding source's `items` array in `src/components/sections/talents/talents.json`:
+   ```json
+   {
+     "id": "peter-griffin",
+     "name": "Peter Griffin",
+     "image": "talents/images/Peter_Griffin.png",
+     "realAudio": "talents/audio/family-guy/peter-griffin-real.mp3",
+     "myAudio": "talents/audio/family-guy/peter-griffin-mine.mp3"
+   }
+   ```
+3. The Talents section is code-split (`React.lazy`), viewport lazy-rendered (`IntersectionObserver`), and loads audio on-demand (`preload="none"`) when a button is clicked.
 
 ### Resume Link
 The Resume components (`ResumeNavLink` in Navbar and `ResumeButton` in About) are configured in `src/components/resume/resume.ts`.
