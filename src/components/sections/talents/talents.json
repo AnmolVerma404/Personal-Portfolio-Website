@@ -1,11 +1,14 @@
 {
+	"onlyShowWithAudio": true,
 	"categories": [
 		{ "id": "all", "label": "All" },
 		{ "id": "movies", "label": "Movies & TV" },
 		{ "id": "anime", "label": "Anime" },
-		{ "id": "games", "label": "Games" },
+		{ "id": "cartoon", "label": "Cartoon" },
+		{ "id": "games", "label": "Gaming" },
 		{ "id": "real", "label": "Real People" },
-		{ "id": "beatbox", "label": "Beatbox" }
+		{ "id": "beatbox", "label": "Beatbox" },
+		{ "id": "songs", "label": "Songs" }
 	],
 	"sources": [
 		{
@@ -18,111 +21,110 @@
 				{
 					"id": "peter-griffin",
 					"name": "Peter Griffin",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/movies/family-guy/peter-griffin",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/family-guy/peter-griffin-real.mp3",
-					"myAudio": "talents/audio/family-guy/peter-griffin-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "lois-griffin",
+					"name": "Lois Griffin",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/movies/family-guy/lois-griffin",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
 				},
 				{
 					"id": "stewie-griffin",
 					"name": "Stewie Griffin",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/movies/family-guy/stewie-griffin",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/family-guy/stewie-griffin-real.mp3",
-					"myAudio": "talents/audio/family-guy/stewie-griffin-mine.mp3"
-				},
-				{
-					"id": "brian-griffin",
-					"name": "Brian Griffin",
-					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/family-guy/brian-griffin-real.mp3",
-					"myAudio": "talents/audio/family-guy/brian-griffin-mine.mp3"
-				},
-				{
-					"id": "quagmire",
-					"name": "Glenn Quagmire",
-					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/family-guy/quagmire-real.mp3",
-					"myAudio": "talents/audio/family-guy/quagmire-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
 				},
 				{
 					"id": "joe-swanson",
 					"name": "Joe Swanson",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/movies/family-guy/joe-swanson",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/family-guy/joe-swanson-real.mp3",
-					"myAudio": "talents/audio/family-guy/joe-swanson-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
 				},
 				{
-					"id": "herbert",
-					"name": "Herbert",
+					"id": "cleveland-brown",
+					"name": "Cleveland Brown",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/movies/family-guy/cleveland-brown",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/family-guy/herbert-real.mp3",
-					"myAudio": "talents/audio/family-guy/herbert-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "glenn-quagmire",
+					"name": "Glenn Quagmire",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/movies/family-guy/glenn-quagmire",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
 				}
 			]
 		},
 		{
-			"id": "dark-knight",
+			"id": "rick-and-morty",
 			"category": "movies",
 			"categoryLabel": "Movies & TV",
-			"title": "The Dark Knight",
+			"title": "Rick and Morty",
 			"image": "talents/images/Peter_Griffin.png",
 			"items": [
 				{
-					"id": "joker",
-					"name": "The Joker",
+					"id": "rick-sanchez",
+					"name": "Rick Sanchez",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/movies/rick-and-morty/rick-sanchez",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/dark-knight/joker-real.mp3",
-					"myAudio": "talents/audio/dark-knight/joker-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
 				},
 				{
-					"id": "bane",
-					"name": "Bane",
+					"id": "morty-smith",
+					"name": "Morty Smith",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/movies/rick-and-morty/morty-smith",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/dark-knight/bane-real.mp3",
-					"myAudio": "talents/audio/dark-knight/bane-mine.mp3"
-				},
-				{
-					"id": "batman",
-					"name": "Batman",
-					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/dark-knight/batman-real.mp3",
-					"myAudio": "talents/audio/dark-knight/batman-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
 				}
 			]
 		},
 		{
-			"id": "naruto",
-			"category": "anime",
-			"categoryLabel": "Anime",
-			"title": "Naruto Shippuden",
+			"id": "koi-mil-gaya",
+			"category": "movies",
+			"categoryLabel": "Movies & TV",
+			"title": "Koi... Mil Gaya",
 			"image": "talents/images/Peter_Griffin.png",
 			"items": [
 				{
-					"id": "madara-uchiha",
-					"name": "Madara Uchiha",
+					"id": "rohit-mehra",
+					"name": "Rohit Mehra",
+					"languageCode": "HI",
+					"language": "Hindi",
+					"folder": "talents/movies/koi-mil-gaya/rohit-mehra",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/naruto/madara-real.mp3",
-					"myAudio": "talents/audio/naruto/madara-mine.mp3"
-				},
-				{
-					"id": "pain",
-					"name": "Pain (Tendo)",
-					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/naruto/pain-real.mp3",
-					"myAudio": "talents/audio/naruto/pain-mine.mp3"
-				},
-				{
-					"id": "itachi-uchiha",
-					"name": "Itachi Uchiha",
-					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/naruto/itachi-real.mp3",
-					"myAudio": "talents/audio/naruto/itachi-mine.mp3"
-				},
-				{
-					"id": "kakashi",
-					"name": "Kakashi Hatake",
-					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/naruto/kakashi-real.mp3",
-					"myAudio": "talents/audio/naruto/kakashi-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
 				}
 			]
 		},
@@ -134,133 +136,484 @@
 			"image": "talents/images/Peter_Griffin.png",
 			"items": [
 				{
-					"id": "zoro",
-					"name": "Roronoa Zoro",
+					"id": "sanji",
+					"name": "Sanji",
+					"languageCode": "JP",
+					"language": "Japanese",
+					"folder": "talents/anime/one-piece/sanji",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/one-piece/zoro-real.mp3",
-					"myAudio": "talents/audio/one-piece/zoro-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
 				},
 				{
-					"id": "doflamingo",
-					"name": "Doflamingo",
+					"id": "blackbeard",
+					"name": "Blackbeard",
+					"languageCode": "JP",
+					"language": "Japanese",
+					"folder": "talents/anime/one-piece/blackbeard",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/one-piece/doflamingo-real.mp3",
-					"myAudio": "talents/audio/one-piece/doflamingo-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "trafalgar-law",
+					"name": "Trafalgar Law",
+					"languageCode": "JP",
+					"language": "Japanese",
+					"folder": "talents/anime/one-piece/trafalgar-law",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
 				},
 				{
 					"id": "brook",
 					"name": "Brook",
+					"languageCode": "JP",
+					"language": "Japanese",
+					"folder": "talents/anime/one-piece/brook",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/one-piece/brook-real.mp3",
-					"myAudio": "talents/audio/one-piece/brook-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "crocodile",
+					"name": "Crocodile",
+					"languageCode": "JP",
+					"language": "Japanese",
+					"folder": "talents/anime/one-piece/crocodile",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "whitebeard",
+					"name": "Whitebeard",
+					"languageCode": "JP",
+					"language": "Japanese",
+					"folder": "talents/anime/one-piece/whitebeard",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
 				}
 			]
 		},
 		{
-			"id": "gta-rdr",
+			"id": "naruto",
+			"category": "anime",
+			"categoryLabel": "Anime",
+			"title": "Naruto",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "gaara",
+					"name": "Gaara",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/anime/naruto/gaara",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "shikamaru",
+					"name": "Shikamaru Nara",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/anime/naruto/shikamaru",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "sasuke",
+					"name": "Sasuke Uchiha",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/anime/naruto/sasuke",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "madara",
+					"name": "Madara Uchiha",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/anime/naruto/madara",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "pain",
+					"name": "Pain",
+					"languageCode": "JP",
+					"language": "Japanese",
+					"folder": "talents/anime/naruto/pain",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				}
+			]
+		},
+		{
+			"id": "my-hero-academia",
+			"category": "anime",
+			"categoryLabel": "Anime",
+			"title": "My Hero Academia",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "all-might",
+					"name": "All Might",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/anime/my-hero-academia/all-might",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				}
+			]
+		},
+		{
+			"id": "jojo",
+			"category": "anime",
+			"categoryLabel": "Anime",
+			"title": "JoJo's Bizarre Adventure",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "joseph-joestar-old",
+					"name": "Joseph Joestar (Old)",
+					"languageCode": "JP",
+					"language": "Japanese",
+					"folder": "talents/anime/jojo/joseph-joestar-old",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "jotaro-kujo",
+					"name": "Jotaro Kujo",
+					"languageCode": "JP",
+					"language": "Japanese",
+					"folder": "talents/anime/jojo/jotaro-kujo",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				}
+			]
+		},
+		{
+			"id": "attack-on-titan",
+			"category": "anime",
+			"categoryLabel": "Anime",
+			"title": "Attack on Titan",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "levi",
+					"name": "Levi Ackerman",
+					"languageCode": "JP",
+					"language": "Japanese",
+					"folder": "talents/anime/attack-on-titan/levi",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				}
+			]
+		},
+		{
+			"id": "dragon-ball",
+			"category": "anime",
+			"categoryLabel": "Anime",
+			"title": "Dragon Ball Z",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "goku",
+					"name": "Goku",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/anime/dragon-ball/goku",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "vegeta",
+					"name": "Vegeta",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/anime/dragon-ball/vegeta",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "krillin",
+					"name": "Krillin",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/anime/dragon-ball/krillin",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "frieza",
+					"name": "Frieza",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/anime/dragon-ball/frieza",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				}
+			]
+		},
+		{
+			"id": "oggy-and-the-cockroaches",
+			"category": "cartoon",
+			"categoryLabel": "Cartoon",
+			"title": "Oggy and the Cockroaches",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "oggy",
+					"name": "Oggy (Billa)",
+					"languageCode": "HI",
+					"language": "Hindi",
+					"folder": "talents/cartoon/oggy-and-the-cockroaches/oggy",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "jack",
+					"name": "Jack (Fauji)",
+					"languageCode": "HI",
+					"language": "Hindi",
+					"folder": "talents/cartoon/oggy-and-the-cockroaches/jack",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "joey",
+					"name": "Joey (Chhotu)",
+					"languageCode": "HI",
+					"language": "Hindi",
+					"folder": "talents/cartoon/oggy-and-the-cockroaches/joey",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "marky",
+					"name": "Marky (Lambu)",
+					"languageCode": "HI",
+					"language": "Hindi",
+					"folder": "talents/cartoon/oggy-and-the-cockroaches/marky",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "dee-dee",
+					"name": "Dee Dee (Jhaplu)",
+					"languageCode": "HI",
+					"language": "Hindi",
+					"folder": "talents/cartoon/oggy-and-the-cockroaches/dee-dee",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "bob",
+					"name": "Bob / Boggy (Sheru)",
+					"languageCode": "HI",
+					"language": "Hindi",
+					"folder": "talents/cartoon/oggy-and-the-cockroaches/bob",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "narrator",
+					"name": "Narrator (Nana Patekar Style)",
+					"languageCode": "HI",
+					"language": "Hindi",
+					"folder": "talents/cartoon/oggy-and-the-cockroaches/narrator",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				}
+			]
+		},
+		{
+			"id": "rdr2",
 			"category": "games",
-			"categoryLabel": "Games",
-			"title": "GTA V & Red Dead II",
+			"categoryLabel": "Gaming",
+			"title": "Red Dead Redemption 2",
 			"image": "talents/images/Peter_Griffin.png",
 			"items": [
 				{
 					"id": "arthur-morgan",
 					"name": "Arthur Morgan",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/games/rdr2/arthur-morgan",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/games/arthur-morgan-real.mp3",
-					"myAudio": "talents/audio/games/arthur-morgan-mine.mp3"
-				},
-				{
-					"id": "trevor-philips",
-					"name": "Trevor Philips",
-					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/games/trevor-philips-real.mp3",
-					"myAudio": "talents/audio/games/trevor-philips-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
 				}
 			]
 		},
 		{
-			"id": "god-of-war",
-			"category": "games",
-			"categoryLabel": "Games",
-			"title": "God of War",
-			"image": "talents/images/Peter_Griffin.png",
-			"items": [
-				{
-					"id": "kratos",
-					"name": "Kratos",
-					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/games/kratos-real.mp3",
-					"myAudio": "talents/audio/games/kratos-mine.mp3"
-				},
-				{
-					"id": "geralt",
-					"name": "Geralt of Rivia",
-					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/games/geralt-real.mp3",
-					"myAudio": "talents/audio/games/geralt-mine.mp3"
-				}
-			]
-		},
-		{
-			"id": "celebrities",
+			"id": "public-figures",
 			"category": "real",
 			"categoryLabel": "Real People",
-			"title": "Actors & Personalities",
+			"title": "Real People",
 			"image": "talents/images/Peter_Griffin.png",
 			"items": [
 				{
-					"id": "morgan-freeman",
-					"name": "Morgan Freeman",
+					"id": "narendra-modi",
+					"name": "Narendra Modi",
+					"languageCode": "HI",
+					"language": "Hindi",
+					"folder": "talents/real/public-figures/narendra-modi",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/real/morgan-freeman-real.mp3",
-					"myAudio": "talents/audio/real/morgan-freeman-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
 				},
 				{
-					"id": "arnold",
-					"name": "Arnold Schwarzenegger",
+					"id": "donald-trump",
+					"name": "Donald Trump",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/real/public-figures/donald-trump",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/real/arnold-real.mp3",
-					"myAudio": "talents/audio/real/arnold-mine.mp3"
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "nana-patekar",
+					"name": "Nana Patekar",
+					"languageCode": "HI",
+					"language": "Hindi",
+					"folder": "talents/real/public-figures/nana-patekar",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
 				}
 			]
 		},
 		{
-			"id": "beatbox-instruments",
+			"id": "beatbox-sounds",
 			"category": "beatbox",
 			"categoryLabel": "Beatbox",
-			"title": "Instruments Beatbox",
+			"title": "Beatbox & Vocal Effects",
 			"image": "talents/images/Peter_Griffin.png",
 			"items": [
 				{
-					"id": "808-liproll",
-					"name": "808 Sub-Bass Liproll",
+					"id": "water-droplet",
+					"name": "Water Droplet",
+					"folder": "talents/beatbox/beatbox-sounds/water-droplet",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/beatbox/808-liproll-real.mp3",
-					"myAudio": "talents/audio/beatbox/808-liproll-mine.mp3",
-					"realLabel": "Real Sound",
+					"originalAudio": "",
+					"myAudio": "",
+					"originalLabel": "Original Sound",
 					"myLabel": "My Beatbox"
 				},
 				{
-					"id": "vocal-trumpet",
-					"name": "Muted Jazz Trumpet",
+					"id": "water-droplet-echo",
+					"name": "Water Droplet (with Echo)",
+					"folder": "talents/beatbox/beatbox-sounds/water-droplet-echo",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/beatbox/vocal-trumpet-real.mp3",
-					"myAudio": "talents/audio/beatbox/vocal-trumpet-mine.mp3",
-					"realLabel": "Real Sound",
+					"originalAudio": "",
+					"myAudio": "",
+					"originalLabel": "Original Sound",
 					"myLabel": "My Beatbox"
 				},
 				{
-					"id": "dj-scratch",
-					"name": "Vinyl Scratch",
+					"id": "sitar",
+					"name": "Sitar",
+					"folder": "talents/beatbox/beatbox-sounds/sitar",
 					"image": "talents/images/Peter_Griffin.png",
-					"realAudio": "talents/audio/beatbox/dj-scratch-real.mp3",
-					"myAudio": "talents/audio/beatbox/dj-scratch-mine.mp3",
-					"realLabel": "Real Sound",
+					"originalAudio": "",
+					"myAudio": "",
+					"originalLabel": "Original Sound",
 					"myLabel": "My Beatbox"
+				},
+				{
+					"id": "flute",
+					"name": "Flute",
+					"folder": "talents/beatbox/beatbox-sounds/flute",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": "",
+					"originalLabel": "Original Sound",
+					"myLabel": "My Beatbox"
+				},
+				{
+					"id": "trumpet",
+					"name": "Trumpet",
+					"folder": "talents/beatbox/beatbox-sounds/trumpet",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": "",
+					"originalLabel": "Original Sound",
+					"myLabel": "My Beatbox"
+				},
+				{
+					"id": "robot",
+					"name": "Robot Voice",
+					"folder": "talents/beatbox/beatbox-sounds/robot",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": "",
+					"originalLabel": "Original Sound",
+					"myLabel": "My Beatbox"
+				}
+			]
+		},
+		{
+			"id": "vocal-songs",
+			"category": "songs",
+			"categoryLabel": "Songs",
+			"title": "Vocal Songs",
+			"image": "talents/images/Peter_Griffin.png",
+			"items": [
+				{
+					"id": "trololo-song",
+					"name": "Trololo Song (Eduard Khil)",
+					"folder": "talents/songs/vocal-songs/trololo-song",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "yo-ho-pirates-life",
+					"name": "Yo Ho (A Pirate's Life for Me) - Deep Voice",
+					"languageCode": "EN",
+					"language": "English",
+					"folder": "talents/songs/vocal-songs/yo-ho-pirates-life",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
+				},
+				{
+					"id": "largo-al-factotum",
+					"name": "Largo al Factotum",
+					"languageCode": "IT",
+					"language": "Italian",
+					"folder": "talents/songs/vocal-songs/largo-al-factotum",
+					"image": "talents/images/Peter_Griffin.png",
+					"originalAudio": "",
+					"myAudio": ""
 				}
 			]
 		}
 	]
 }
-

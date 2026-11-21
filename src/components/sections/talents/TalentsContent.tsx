@@ -5,18 +5,54 @@ import { TalentSidebar } from './TalentSidebar';
 import { TalentCard } from './TalentCard';
 import {
 	TALENTS_DATA,
+	hasTalentItemAudio,
 	resolveTalentAsset,
 	type TalentCategoryId,
+	type TalentsCatalog,
 } from './talents-data';
 import { useAudioPlayer } from './useAudioPlayer';
 
 const INITIAL_VISIBLE_CARDS = 6;
 const LOAD_MORE_STEP = 6;
 
-export const TalentsContent: React.FC = () => {
+export interface TalentsContentProps {
+	catalog?: TalentsCatalog;
+	requireAudio?: boolean;
+}
+
+export const TalentsContent: React.FC<TalentsContentProps> = ({
+	catalog = TALENTS_DATA,
+	requireAudio,
+}) => {
+	const shouldRequireAudio =
+		requireAudio ?? catalog.onlyShowWithAudio ?? true;
+
+	// Filter sources and items to only those with audio when shouldRequireAudio is enabled
+	const availableSources = useMemo(() => {
+		if (!shouldRequireAudio) {
+			return catalog.sources;
+		}
+		return catalog.sources
+			.map(source => ({
+				...source,
+				items: source.items.filter(hasTalentItemAudio),
+			}))
+			.filter(source => source.items.length > 0);
+	}, [catalog.sources, shouldRequireAudio]);
+
+	const availableCategories = useMemo(() => {
+		if (!shouldRequireAudio) {
+			return catalog.categories;
+		}
+		const activeCatSet = new Set(availableSources.map(s => s.category));
+		return catalog.categories.filter(
+			cat => cat.id === 'all' || activeCatSet.has(cat.id)
+		);
+	}, [catalog.categories, availableSources, shouldRequireAudio]);
+
 	const [activeCategory, setActiveCategory] = useState<TalentCategoryId>('all');
 	const [activeSourceId, setActiveSourceId] = useState<string>(
-		TALENTS_DATA.sources[0]?.id ?? ''
+		availableSources[0]?.id ?? ''
 	);
 	const [searchQuery, setSearchQuery] = useState<string>('');
 	const [visibleCount, setVisibleCount] = useState<number>(INITIAL_VISIBLE_CARDS);
@@ -25,7 +61,7 @@ export const TalentsContent: React.FC = () => {
 
 	const filteredSources = useMemo(() => {
 		const q = searchQuery.trim().toLowerCase();
-		return TALENTS_DATA.sources.filter(source => {
+		return availableSources.filter(source => {
 			const matchesCategory =
 				activeCategory === 'all' || source.category === activeCategory;
 			if (!matchesCategory) return false;
@@ -33,7 +69,7 @@ export const TalentsContent: React.FC = () => {
 			if (source.title.toLowerCase().includes(q)) return true;
 			return source.items.some(item => item.name.toLowerCase().includes(q));
 		});
-	}, [activeCategory, searchQuery]);
+	}, [availableSources, activeCategory, searchQuery]);
 
 	const currentSource = useMemo(() => {
 		return (
@@ -60,7 +96,7 @@ export const TalentsContent: React.FC = () => {
 	const handleSelectCategory = (categoryId: TalentCategoryId) => {
 		setActiveCategory(categoryId);
 		setVisibleCount(INITIAL_VISIBLE_CARDS);
-		const nextSources = TALENTS_DATA.sources.filter(s => {
+		const nextSources = availableSources.filter(s => {
 			const matchesCat = categoryId === 'all' || s.category === categoryId;
 			if (!matchesCat) return false;
 			const q = searchQuery.trim().toLowerCase();
@@ -87,7 +123,7 @@ export const TalentsContent: React.FC = () => {
 		setSearchQuery(query);
 		setVisibleCount(INITIAL_VISIBLE_CARDS);
 		const q = query.trim().toLowerCase();
-		const nextSources = TALENTS_DATA.sources.filter(s => {
+		const nextSources = availableSources.filter(s => {
 			const matchesCat =
 				activeCategory === 'all' || s.category === activeCategory;
 			if (!matchesCat) return false;
@@ -105,10 +141,22 @@ export const TalentsContent: React.FC = () => {
 		}
 	};
 
+	if (availableSources.length === 0) {
+		return (
+			<div className="rounded-xl border border-[#dee2e6] bg-white p-8 text-center text-sm text-[#6c757d] shadow-sm">
+				Voice clips will appear here automatically once audio paths are added to{' '}
+				<code className="rounded bg-[#f8f9fa] px-1.5 py-0.5 text-xs text-[#212529]">
+					talents.json
+				</code>
+				.
+			</div>
+		);
+	}
+
 	return (
 		<>
 			<TalentFilterBar
-				categories={TALENTS_DATA.categories}
+				categories={availableCategories}
 				activeCategory={activeCategory}
 				onSelectCategory={handleSelectCategory}
 				searchQuery={searchQuery}
@@ -190,4 +238,3 @@ export const TalentsContent: React.FC = () => {
 };
 
 export default TalentsContent;
-

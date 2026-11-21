@@ -116,9 +116,9 @@ describe('App and Core Components', () => {
 		expect(starBadge).toBeTruthy();
 	});
 
-	test('renders Talents section and supports category filtering, sidebar switching, search, and voice buttons', async () => {
+	test('renders Talents section and supports category filtering, sidebar switching, search, language badge, and voice buttons', async () => {
 		await act(async () => {
-			render(<Talents eager />);
+			render(<Talents eager requireAudio={false} />);
 		});
 
 		expect(await screen.findByText('Personal Talents')).toBeTruthy();
@@ -131,34 +131,54 @@ describe('App and Core Components', () => {
 			fireEvent.click(animeTab);
 		});
 
-		expect(await screen.findByText('Madara Uchiha')).toBeTruthy();
+		expect(await screen.findByText('Sanji')).toBeTruthy();
 
-		// Select One Piece from the sidebar
-		const onePieceBtn = screen.getByRole('button', { name: /One Piece/i });
+		// Select Naruto from the sidebar
+		const narutoBtn = screen.getByRole('button', { name: /Naruto/i });
 		await act(async () => {
-			fireEvent.click(onePieceBtn);
+			fireEvent.click(narutoBtn);
 		});
 
-		expect(await screen.findByText('Roronoa Zoro')).toBeTruthy();
+		expect(await screen.findByText('Gaara')).toBeTruthy();
+		expect(screen.getByText('Pain')).toBeTruthy();
+
+		// Switch to Cartoon category and verify Hindi dub names in brackets
+		const cartoonTab = screen.getByRole('tab', { name: 'Cartoon' });
+		await act(async () => {
+			fireEvent.click(cartoonTab);
+		});
+
+		expect(await screen.findByText('Oggy (Billa)')).toBeTruthy();
+		expect(screen.getByText('Dee Dee (Jhaplu)')).toBeTruthy();
 
 		// Test search filtering
 		const searchInput = screen.getByPlaceholderText('Search character or title...');
 		await act(async () => {
-			fireEvent.change(searchInput, { target: { value: 'Brook' } });
+			fireEvent.change(searchInput, { target: { value: 'Jhaplu' } });
 		});
 
-		expect(screen.getByText('Brook')).toBeTruthy();
-		expect(screen.queryByText('Roronoa Zoro')).toBeNull();
+		expect(screen.getByText('Dee Dee (Jhaplu)')).toBeTruthy();
+		expect(screen.queryByText('Oggy (Billa)')).toBeNull();
 
-		// Test Real Voice and My Voice buttons
-		const realVoiceBtn = screen.getByRole('button', { name: /Real Voice/i });
-		const myVoiceBtn = screen.getByRole('button', { name: /My Voice/i });
+		// Test Original Audio and My Audio buttons
+		const originalVoiceBtn = screen.getByRole('button', { name: /Original Audio/i });
+		const myVoiceBtn = screen.getByRole('button', { name: /My Audio/i });
 
 		await act(async () => {
-			fireEvent.click(realVoiceBtn);
+			fireEvent.click(originalVoiceBtn);
 		});
 		await act(async () => {
 			fireEvent.click(myVoiceBtn);
 		});
+	});
+
+	test('hides characters without audio when requireAudio is true', async () => {
+		await act(async () => {
+			render(<Talents eager requireAudio={true} />);
+		});
+
+		expect(
+			await screen.findByText(/Voice clips will appear here automatically/i)
+		).toBeTruthy();
 	});
 });

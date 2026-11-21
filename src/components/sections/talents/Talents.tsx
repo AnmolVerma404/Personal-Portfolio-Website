@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, Suspense, lazy } from 'react';
 import { Section } from '@/components/layout/Section';
 import { Skeleton } from '@/components/ui/skeleton';
+import type { TalentsCatalog } from './talents-data';
 
 const LazyTalentsContent = lazy(() => import('./TalentsContent'));
 
@@ -10,6 +11,8 @@ export interface TalentsProps {
 	 * Useful for direct tests or deep-linking.
 	 */
 	eager?: boolean;
+	catalog?: TalentsCatalog;
+	requireAudio?: boolean;
 }
 
 const TalentsSkeleton: React.FC = () => (
@@ -32,7 +35,11 @@ const TalentsSkeleton: React.FC = () => (
 	</div>
 );
 
-export const Talents: React.FC<TalentsProps> = ({ eager = false }) => {
+export const Talents: React.FC<TalentsProps> = ({
+	eager = false,
+	catalog,
+	requireAudio,
+}) => {
 	const [shouldRender, setShouldRender] = useState<boolean>(() => {
 		if (eager) return true;
 		if (typeof window !== 'undefined' && window.location.hash === '#talents') {
@@ -87,7 +94,7 @@ export const Talents: React.FC<TalentsProps> = ({ eager = false }) => {
 				</h2>
 				{shouldRender ? (
 					<Suspense fallback={<TalentsSkeleton />}>
-						<LazyTalentsContent />
+						<LazyTalentsContent catalog={catalog} requireAudio={requireAudio} />
 					</Suspense>
 				) : (
 					<TalentsSkeleton />
@@ -98,4 +105,3 @@ export const Talents: React.FC<TalentsProps> = ({ eager = false }) => {
 };
 
 export default Talents;
-

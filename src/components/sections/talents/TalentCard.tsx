@@ -23,14 +23,36 @@ export const TalentCard: React.FC<TalentCardProps> = ({
 		activeAudio?.itemId === item.id && activeAudio.trackType === 'mine';
 	const isAnyPlaying = isPlayingReal || isPlayingMine;
 
-	const realLabel = item.realLabel || 'Real Voice';
-	const myLabel = item.myLabel || 'My Voice';
-	const hasRealAudio = item.realAudio !== undefined;
+	const originalAudioPath = item.originalAudio?.trim() || item.realAudio?.trim() || '';
+	const myAudioPath = item.myAudio?.trim() || '';
+
+	const originalLabel = item.originalLabel || item.realLabel || 'Original Audio';
+	const myLabel = item.myLabel || 'My Audio';
+
+	const showOriginalButton = Boolean(originalAudioPath) || !myAudioPath;
+	const showMyButton = Boolean(myAudioPath) || !originalAudioPath;
 
 	return (
 		<Card className="group flex h-[300px] flex-col justify-between overflow-hidden rounded-xl border border-[#dee2e6] bg-white p-0 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
 			{/* ~70% Card Area: Character Image Highlight */}
 			<div className="relative flex h-[205px] w-full items-end justify-center overflow-hidden bg-[#f8f9fa] px-4 pt-4">
+				{item.languageCode && (
+					<div
+						title={item.language || item.languageCode}
+						aria-label={item.language || item.languageCode}
+						className="group/lang absolute top-2.5 right-2.5 z-10 cursor-default"
+					>
+						<span className="inline-flex items-center rounded border border-[#dee2e6] bg-white/90 px-1.5 py-0.5 text-[10px] leading-none font-semibold tracking-wider text-[#495057] uppercase shadow-2xs">
+							{item.languageCode.toLowerCase()}
+						</span>
+						{item.language && (
+							<span className="pointer-events-none absolute top-full right-0 mt-1 hidden rounded bg-[#212529] px-2 py-1 text-[11px] font-normal whitespace-nowrap text-white shadow-md group-hover/lang:block">
+								{item.language}
+							</span>
+						)}
+					</div>
+				)}
+
 				<img
 					src={resolveTalentAsset(item.image)}
 					alt={item.name}
@@ -48,7 +70,7 @@ export const TalentCard: React.FC<TalentCardProps> = ({
 				</div>
 			</div>
 
-			{/* ~30% Card Area: Character Name + Real Voice & My Voice Buttons */}
+			{/* ~30% Card Area: Character Name + Original Audio & My Audio Buttons */}
 			<CardContent className="flex flex-1 flex-col justify-between bg-white px-4 py-3">
 				<h4 className="truncate text-center text-base font-semibold text-[#212529]">
 					{item.name}
@@ -57,15 +79,15 @@ export const TalentCard: React.FC<TalentCardProps> = ({
 				<div
 					className={cn(
 						'grid gap-2 pt-1',
-						hasRealAudio ? 'grid-cols-2' : 'grid-cols-1'
+						showOriginalButton && showMyButton ? 'grid-cols-2' : 'grid-cols-1'
 					)}
 				>
-					{hasRealAudio && (
+					{showOriginalButton && (
 						<Button
 							type="button"
 							variant="outline"
 							size="sm"
-							onClick={() => onToggleAudio(item.id, 'real', item.realAudio)}
+							onClick={() => onToggleAudio(item.id, 'real', originalAudioPath)}
 							className={cn(
 								'h-8 cursor-pointer gap-1.5 text-xs font-medium',
 								isPlayingReal
@@ -78,29 +100,31 @@ export const TalentCard: React.FC<TalentCardProps> = ({
 							) : (
 								<Play data-icon="inline-start" />
 							)}
-							<span className="truncate">{realLabel}</span>
+							<span className="truncate">{originalLabel}</span>
 						</Button>
 					)}
 
-					<Button
-						type="button"
-						variant="outline"
-						size="sm"
-						onClick={() => onToggleAudio(item.id, 'mine', item.myAudio)}
-						className={cn(
-							'h-8 cursor-pointer gap-1.5 text-xs font-medium',
-							isPlayingMine
-								? 'border-[#0d6efd] bg-[#0d6efd] text-white hover:bg-[#0b5ed7] hover:text-white'
-								: 'border-[#ced4da] bg-white text-[#212529] hover:border-[#0d6efd] hover:text-[#0d6efd]'
-						)}
-					>
-						{isPlayingMine ? (
-							<Pause data-icon="inline-start" />
-						) : (
-							<Play data-icon="inline-start" />
-						)}
-						<span className="truncate">{myLabel}</span>
-					</Button>
+					{showMyButton && (
+						<Button
+							type="button"
+							variant="outline"
+							size="sm"
+							onClick={() => onToggleAudio(item.id, 'mine', myAudioPath)}
+							className={cn(
+								'h-8 cursor-pointer gap-1.5 text-xs font-medium',
+								isPlayingMine
+									? 'border-[#0d6efd] bg-[#0d6efd] text-white hover:bg-[#0b5ed7] hover:text-white'
+									: 'border-[#ced4da] bg-white text-[#212529] hover:border-[#0d6efd] hover:text-[#0d6efd]'
+							)}
+						>
+							{isPlayingMine ? (
+								<Pause data-icon="inline-start" />
+							) : (
+								<Play data-icon="inline-start" />
+							)}
+							<span className="truncate">{myLabel}</span>
+						</Button>
+					)}
 				</div>
 			</CardContent>
 		</Card>
@@ -108,4 +132,3 @@ export const TalentCard: React.FC<TalentCardProps> = ({
 };
 
 export default TalentCard;
-

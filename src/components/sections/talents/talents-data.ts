@@ -4,9 +4,11 @@ export type TalentCategoryId =
 	| 'all'
 	| 'movies'
 	| 'anime'
+	| 'cartoon'
 	| 'games'
 	| 'real'
-	| 'beatbox';
+	| 'beatbox'
+	| 'songs';
 
 export interface TalentCategory {
 	id: TalentCategoryId;
@@ -16,9 +18,14 @@ export interface TalentCategory {
 export interface TalentItem {
 	id: string;
 	name: string;
+	languageCode?: string;
+	language?: string;
+	folder?: string;
 	image: string;
+	originalAudio?: string;
 	realAudio?: string;
 	myAudio?: string;
+	originalLabel?: string;
 	realLabel?: string;
 	myLabel?: string;
 }
@@ -33,11 +40,23 @@ export interface TalentSource {
 }
 
 export interface TalentsCatalog {
+	onlyShowWithAudio?: boolean;
 	categories: readonly TalentCategory[];
 	sources: readonly TalentSource[];
 }
 
 export const TALENTS_DATA = rawTalentsData as TalentsCatalog;
+
+/**
+ * Returns true if the item has at least one configured audio file path (myAudio or originalAudio).
+ */
+export function hasTalentItemAudio(item: TalentItem): boolean {
+	return Boolean(
+		item.myAudio?.trim() ||
+			item.originalAudio?.trim() ||
+			item.realAudio?.trim()
+	);
+}
 
 /**
  * Resolves a relative public asset path (e.g. "talents/images/Peter_Griffin.png")
@@ -54,4 +73,3 @@ export function resolveTalentAsset(path?: string): string {
 	const normalized = path.startsWith('/') ? path.slice(1) : path;
 	return `${base}${normalized}`;
 }
-
