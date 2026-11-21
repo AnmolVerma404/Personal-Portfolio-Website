@@ -1,17 +1,17 @@
-# Graph Report - portfolio-site  (2026-10-23)
+# Graph Report - portfolio-site  (2026-11-21)
 
 ## Corpus Check
-- 75 files · ~59,620 words
+- 75 files · ~60,686 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 5 file(s) not represented in the graph (top: .css 3, (none) 1, .ico 1)
+- Unclassified: 53 file(s) not represented in the graph (top: (none) 49, .css 3, .ico 1)
 
 ## Summary
-- 385 nodes · 651 edges · 33 communities (25 shown, 8 thin omitted)
-- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 10 edges (avg confidence: 0.84)
+- 387 nodes · 659 edges · 34 communities (26 shown, 8 thin omitted)
+- Extraction: 98% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 11 edges (avg confidence: 0.84)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `4d3dd4c1`
+- Built from commit: `7a2f1f74`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,7 +22,7 @@
 - Shadcn Skill & Design System
 - Package Metadata & Routing
 - App TypeScript Config
-- TalentCard.tsx
+- utils.ts
 - Development & Testing Dependencies
 - Node TypeScript Config
 - Radix to Base UI Migration
@@ -33,7 +33,7 @@
 - Hero Section & Social Icons
 - PWA Web App Manifest
 - Test Setup & Observer Mocks
-- WCAG Color Contrast Showcase
+- Skills.tsx
 - Vite Asset Type Declarations
 - Vite & Tailwind Build Config
 - Root TypeScript Project References
@@ -46,6 +46,7 @@
 - React PWA App Icons
 - Hashnode Brand Icon
 - Graphify Sync & Maintenance Skill
+- badge.tsx
 
 ## God Nodes (most connected - your core abstractions)
 1. `react` - 29 edges
@@ -82,15 +83,15 @@
 - **Portfolio Visual Identity and Brand Assets** — public_hashnode_icon, public_social_image_banner, src_assets_img_anmolverma_portrait, src_assets_img_rtcamp_logo [INFERRED 0.75]
 - **shadcn Registry Discovery, Authoring, and Installation Ecosystem** — agents_skills_shadcn_cli_shadcn_cli, agents_skills_shadcn_mcp_server, agents_skills_shadcn_registry_authoring, agents_skills_shadcn_cli_components_json [INFERRED 0.95]
 
-## Communities (33 total, 8 thin omitted)
+## Communities (34 total, 8 thin omitted)
 
 ### Community 0 - "react"
 Cohesion: 0.09
-Nodes (30): class-variance-authority, react, react-dom, App(), basename, Home(), Footer(), Section() (+22 more)
+Nodes (39): react, react-dom, @testing-library/react, App(), basename, Home(), Footer(), Section() (+31 more)
 
 ### Community 1 - "ProjectCard.tsx"
-Cohesion: 0.14
-Nodes (25): @testing-library/react, fetchLanguages(), fetchRepo(), fetchUserRepos(), formatUpdatedAt(), GitHubRepo, Languages, ProjectCard() (+17 more)
+Cohesion: 0.18
+Nodes (20): fetchLanguages(), fetchRepo(), fetchUserRepos(), formatUpdatedAt(), GitHubRepo, Languages, ProjectCard(), ProjectCardProps (+12 more)
 
 ### Community 2 - "Shadcn Component Config"
 Cohesion: 0.09
@@ -102,15 +103,15 @@ Nodes (16): shadcn/ui OpenAI Agent Interface Config, components.json Configurati
 
 ### Community 4 - "Package Metadata & Routing"
 Cohesion: 0.10
-Nodes (20): description, homepage, name, type, version, cn, @fontsource-variable/geist, @fortawesome/free-solid-svg-icons (+12 more)
+Nodes (19): description, homepage, name, type, version, cn, @fontsource-variable/geist, jsdom (+11 more)
 
 ### Community 5 - "App TypeScript Config"
 Cohesion: 0.10
 Nodes (19): compilerOptions, allowImportingTsExtensions, isolatedModules, jsx, lib, module, moduleDetection, moduleResolution (+11 more)
 
-### Community 6 - "TalentCard.tsx"
-Cohesion: 0.13
-Nodes (25): defaultStates, @base-ui/react, TalentCard(), TalentCardProps, TalentFilterBar(), TalentFilterBarProps, resolveTalentAsset(), TalentCategory (+17 more)
+### Community 6 - "utils.ts"
+Cohesion: 0.14
+Nodes (15): ColorPair(), contrast(), luminance(), toHex(), toRgb(), defaultStates, @base-ui/react, TalentFilterBar() (+7 more)
 
 ### Community 7 - "Development & Testing Dependencies"
 Cohesion: 0.12
@@ -129,8 +130,8 @@ Cohesion: 0.13
 Nodes (15): dependencies, @base-ui/react, class-variance-authority, cn, @fontsource-variable/geist, @fortawesome/free-solid-svg-icons, @fortawesome/react-fontawesome, lucide-react (+7 more)
 
 ### Community 11 - "Navigation Bar & Sheet Drawer"
-Cohesion: 0.16
-Nodes (14): lucide-react, Navbar(), NavbarProps, RESUME_URL, ResumeButtonProps, ResumeNavLink(), ResumeNavLinkProps, Sheet() (+6 more)
+Cohesion: 0.24
+Nodes (11): lucide-react, Navbar(), NavbarProps, ResumeNavLink(), Sheet(), SheetContent(), SheetHeader(), SheetOverlay() (+3 more)
 
 ### Community 12 - "Build & Deployment Scripts"
 Cohesion: 0.15
@@ -141,16 +142,16 @@ Cohesion: 0.22
 Nodes (6): components, missing, source, [uiArg, ...roots], uiDir, walk()
 
 ### Community 14 - "Hero Section & Social Icons"
-Cohesion: 0.29
-Nodes (6): @fortawesome/free-brands-svg-icons, @fortawesome/react-fontawesome, react-typist-component, HeroProps, SOCIAL_ICONS, SocialIconItem
+Cohesion: 0.25
+Nodes (7): @fortawesome/free-brands-svg-icons, @fortawesome/free-solid-svg-icons, @fortawesome/react-fontawesome, react-typist-component, HeroProps, SOCIAL_ICONS, SocialIconItem
 
 ### Community 15 - "PWA Web App Manifest"
 Cohesion: 0.25
 Nodes (7): background_color, display, icons, name, short_name, start_url, theme_color
 
-### Community 17 - "WCAG Color Contrast Showcase"
-Cohesion: 0.60
-Nodes (5): ColorPair(), contrast(), luminance(), toHex(), toRgb()
+### Community 17 - "Skills.tsx"
+Cohesion: 0.21
+Nodes (12): HARD_SKILLS, Skill, Skills(), SkillsProps, Progress(), ProgressIndicator(), ProgressTrack(), Tabs() (+4 more)
 
 ### Community 18 - "Vite Asset Type Declarations"
 Cohesion: 0.33
@@ -184,25 +185,29 @@ Nodes (3): Social Preview Hero Screenshot (Hashir Shoaib Template), Anmol Verma 
 Cohesion: 0.22
 Nodes (8): 1. At the End of a Coding Task / Session (Recommended Default), 2. Automated via Git Post-Commit Hook (Best Zero-Token Option for Developers), 3. After Major Documentation, Architecture, or Image Updates, Core Principle: Two-Tier Extraction Cost, Graphify Sync & Maintenance Skill, Quick Commands Reference, Recommended Sync Strategy: When Should You Update?, Tracked vs. Ignored Files in Git
 
+### Community 33 - "badge.tsx"
+Cohesion: 0.50
+Nodes (4): class-variance-authority, Badge(), BadgeProps, badgeVariants
+
 ## Knowledge Gaps
 - **32 isolated node(s):** `@fontsource-variable/geist`, `react-router-dom`, `shadcn`, `tw-animate-css`, `react-app` (+27 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 209 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 207 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `react` connect `react` to `ProjectCard.tsx`, `Package Metadata & Routing`, `TalentCard.tsx`, `Navigation Bar & Sheet Drawer`, `Hero Section & Social Icons`, `WCAG Color Contrast Showcase`, `Vite Asset Type Declarations`?**
-  _High betweenness centrality (0.190) - this node is a cross-community bridge._
+- **Why does `react` connect `react` to `ProjectCard.tsx`, `badge.tsx`, `Package Metadata & Routing`, `utils.ts`, `Navigation Bar & Sheet Drawer`, `Hero Section & Social Icons`, `Skills.tsx`, `Vite Asset Type Declarations`?**
+  _High betweenness centrality (0.193) - this node is a cross-community bridge._
 - **What connects `@fontsource-variable/geist`, `react-router-dom`, `shadcn` to the rest of the system?**
   _32 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `react` be split into smaller, more focused modules?**
-  _Cohesion score 0.0898989898989899 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08571428571428572 - nodes in this community are weakly interconnected._
 - **Why does `devDependencies` connect `Development & Testing Dependencies` to `Package Metadata & Routing`?**
   _High betweenness centrality (0.049) - this node is a cross-community bridge._
-- **Should `ProjectCard.tsx` be split into smaller, more focused modules?**
-  _Cohesion score 0.13825757575757575 - nodes in this community are weakly interconnected._
-- **Why does `dependencies` connect `Runtime UI Dependencies` to `Package Metadata & Routing`?**
-  _High betweenness centrality (0.046) - this node is a cross-community bridge._
 - **Should `Shadcn Component Config` be split into smaller, more focused modules?**
   _Cohesion score 0.09090909090909091 - nodes in this community are weakly interconnected._
+- **Why does `dependencies` connect `Runtime UI Dependencies` to `Package Metadata & Routing`?**
+  _High betweenness centrality (0.046) - this node is a cross-community bridge._
+- **Should `Shadcn Skill & Design System` be split into smaller, more focused modules?**
+  _Cohesion score 0.14761904761904762 - nodes in this community are weakly interconnected._
